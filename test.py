@@ -1,11 +1,9 @@
-import os
-def get():
-    nets = sorted(os.listdir("./saved_networks"))
-    for net in nets:
-        yield net
+import numpy as np
+
+a = np.array([[1,2,3],[4,5,6],[7,8,9]])
+b = np.array([[10,10,10],[10,100,100],[10,10,10]])
+
+c = a * b
+print c
 
 
-g = get()
-
-for i in range(5):
-    print g.next()

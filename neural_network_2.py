@@ -17,12 +17,19 @@ Compare this result with the time for a non-optimized network:
     Time elapsed: 54.5859999657 seconds
 """
 
+"""
+CHANGES MADE:
+    Make self.biases a list of (layer_size, 1) matrices instead of (layer_size) vectors
+    Make activity, error and z (layer_size, len(mini_batch)) matrices instead of (layer_size) vectors
+
+"""
+
 class NeuralNetwork:
     def __init__(self, layer_sizes):
         self.L = len(layer_sizes)
         self.layer_sizes = layer_sizes
         self.weights = [None] + [random_matrix(layer_sizes[i], layer_sizes[i-1], 0.2) for i in range(1, len(layer_sizes))]
-        self.biases = [None] + [random_vector(layer_sizes[i], 0.2) for i in range(1, len(layer_sizes))]
+        self.biases = [None] + [random_matrix(layer_sizes[i], 1, 0.2) for i in range(1, len(layer_sizes))]
         self.activation_function = np.vectorize(sigmoid)
         self.activation_function_prime = np.vectorize(sigmoid_prime)
         self.cost_function_gradient = least_squares_cost_function_gradient
@@ -55,23 +62,28 @@ class NeuralNetwork:
         new_biases = [None] + [b for b in self.biases[1:]]
         factor = - learning_rate / len(mini_batch)
 
-        for input, target in mini_batch:
-            gradient_weights, gradient_biases = self.backpropagation(input, target)
-            for layer in range(1, self.L):
-                new_weights[layer] += factor * gradient_weights[layer]
-                new_biases[layer] += factor * gradient_biases[layer]
+        gb, gw = self.backpropagation(mini_batch)
+
+
+        # for input, target in mini_batch:
+        #     gradient_weights, gradient_biases = self.backpropagation(input, target)
+        #     for layer in range(1, self.L):
+        #         new_weights[layer] += factor * gradient_weights[layer]
+        #         new_biases[layer] += factor * gradient_biases[layer]
 
         self.weights = new_weights
         self.biases = new_biases
 
 
-    def backpropagation(self, input, target):
-        activity = [np.zeros(layer_size) for layer_size in self.layer_sizes]
-        error = [None] + [np.zeros(layer_size) for layer_size in self.layer_sizes[1:]]
-        z = [None] + [np.zeros(layer_size) for layer_size in self.layer_sizes[1:]]
+    def backpropagation(self, mini_batch):
+        inputs, targets = zip(*mini_batch)
+
+        activity = [np.zeros((layer_size, len(mini_batch))) for layer_size in self.layer_sizes]
+        error = [None] + [np.zeros((layer_size, len(mini_batch))) for layer_size in self.layer_sizes[1:]]
+        z = [None] + [np.zeros((layer_size, len(mini_batch))) for layer_size in self.layer_sizes[1:]]
 
         # 1. Input activation
-        activity[0] = input
+        activity[0] = np.array([input for input in inputs]).T
 
         # 2. Feed-forward
         for layer in range(1, self.L):
@@ -79,7 +91,7 @@ class NeuralNetwork:
             activity[layer] = self.activation_function(z[layer])
 
         # 3. Calculate error for last layer
-        cost_gradient = self.cost_function_gradient(target, activity[-1])
+        cost_gradient = self.cost_function_gradient(targets, activity[-1])
         error[-1] = cost_gradient * self.activation_function_prime(z[-1])
 
         # 4. Feed-backward
@@ -87,8 +99,9 @@ class NeuralNetwork:
             error[layer] = np.dot(self.weights[layer+1].T, error[layer+1]) * self.activation_function_prime(z[layer])
 
         # 5. Calculate gradients
-        gradient_weights = [None] + [np.outer(error[layer], activity[layer-1]) for layer in range(1, self.L)]
-        gradient_biases = [None] + [error[layer] for layer in range(1, self.L)]
+        # TODO: Figure out what happens for outer with new simultaneous system
+        # gradient_weights = [None] + [np.outer(error[layer], activity[layer-1]) for layer in range(1, self.L)]
+        # gradient_biases = [None] + [error[layer] for layer in range(1, self.L)]
         return gradient_weights, gradient_biases
 
     def feedforward(self, activity):
