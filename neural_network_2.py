@@ -1,21 +1,3 @@
-"""
-
-Vad kunna gora?
-
-- kunna spara och aterskapa natverk sparade i filer, dar all information om natverket finns
-
-- i konstruktorn:
- - ta in en lista over storlekarna pa lagren, tex (784, 100, 100, 10)
- - ta in de olika hypervariablerna
-
- - ha en metod for att trana, tar in ett dataset som argument
-
- - ha en metod for att klassificera enligt de aktuella vikterna
-
-- ateranvanda kod mer
-
-
-"""
 import numpy as np
 import pickle
 import math
@@ -23,6 +5,17 @@ import random
 import gzip
 from time import time
 import winsound
+
+
+"""
+This version will try to do calculations for all training cases in a mini batch at the same time to improve efficiency.
+Compare this result with the time for a non-optimized network:
+    network = NeuralNetwork((784, 100, 10))
+    network.SGD(train_set, 10, 1, 3, test_set, highest_activation)
+    ->
+    Epoch 0: 9500 out of 10000 test cases correct (95.0%)
+    Time elapsed: 54.5859999657 seconds
+"""
 
 class NeuralNetwork:
     def __init__(self, layer_sizes):
