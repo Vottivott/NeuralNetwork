@@ -67,32 +67,64 @@ class NeuralNetwork:
             self.biases[layer] += factor * gradient_biases[layer]
 
     def backpropagation(self, mini_batch):
-        inputs, targets = zip(*mini_batch)
+        inputs, targets = map(np.hstack, zip(*mini_batch))
+        assert all(inputs[:, 0:1] == zip(*mini_batch)[0][0])
 
         activity = [np.zeros((layer_size, len(mini_batch))) for layer_size in self.layer_sizes]
         error = [None] + [np.zeros((layer_size, len(mini_batch))) for layer_size in self.layer_sizes[1:]]
         z = [None] + [np.zeros((layer_size, len(mini_batch))) for layer_size in self.layer_sizes[1:]]
 
         # 1. Input activation
-        activity[0] = np.array([input for input in inputs]).T
+        activity[0] = inputs
 
         # 2. Feed-forward
         for layer in range(1, self.L):
             z[layer] = np.dot(self.weights[layer], activity[layer-1]) + self.biases[layer]
             activity[layer] = self.activation_function(z[layer])
 
+            Z = np.dot(self.weights[layer], activity[layer - 1][:,0]) + self.biases[layer][:,0]
+            a = self.activation_function(Z)
+            c_a = activity[layer][:,0]
+            assert all(abs(c_a - a) < 0.0000001)
+
         # 3. Calculate error for last layer
         cost_gradient = self.cost_function_gradient(targets, activity[-1])
         error[-1] = cost_gradient * self.activation_function_prime(z[-1])
+
+        CG = self.cost_function_gradient(targets[:,0], activity[-1][:,0])
+        E = CG * self.activation_function_prime(z[-1][:,0])
+        c_E = error[-1][:,0]
+        assert all(abs(c_E - E) < 0.0000001)
+
 
         # 4. Feed-backward
         for layer in range(self.L-2, 0, -1):
             error[layer] = np.dot(self.weights[layer+1].T, error[layer+1]) * self.activation_function_prime(z[layer])
 
+            E = np.dot(self.weights[layer + 1].T, error[layer + 1][:,0]) * self.activation_function_prime(z[layer][:,0])
+            c_E = error[layer][:,0]
+            assert all(abs(c_E - E) < 0.0000001)
+
+
+
         # 5. Calculate gradients
         # The gradients from all cases in the mini batch are summed up into one weight matrix and bias vector per layer
         gradient_weights = [None] + [np.dot(error[layer], activity[layer-1].T) for layer in range(1, self.L)]
         gradient_biases = [None] + [np.dot(error[layer], np.ones((len(mini_batch), 1))) for layer in range(1, self.L)]
+
+        # TODO: Continue debugging... :/
+
+        # GW = [None] + [np.outer(error[layer][:,0], activity[layer - 1][:,0]) for layer in range(1, self.L)]
+        # GB = [None] + [error[layer][:,0] for layer in range(1, self.L)]
+        # c_GW = gradient_weights#[None] + [gradient_weights[layer] for layer in range(1, self.L)]
+        # c_GB = gradient_biases#[None] + [gradient_biases[layer] for layer in range(1,self.L)]
+        # diff_GW = c_GW[layer] - GW[layer]
+        # diff_GB = c_GB[layer] - GB[layer]
+        # for layer in range(1, self.L):
+        #     assert all(abs(c_GW[layer] - GW[layer]) < 0.0000001)
+        #     assert all(abs(c_GB[layer] - GB[layer]) < 0.0000001)
+
+
         return gradient_weights, gradient_biases
 
     def feedforward(self, activity):
@@ -128,7 +160,7 @@ def least_squares_cost_function_gradient(target, output):
     return (output - target)
 
 def activation_pattern(digit):
-    return np.array([1*(n == digit) for n in range(10)])
+    return np.array([[1*(n == digit) for n in range(10)]]).T
 
 def digit_from_activation_pattern(activation_pattern):
     return max(range(10), key=lambda x: activation_pattern[x])
@@ -147,10 +179,11 @@ def test_result_string(test_result, test_data):
 def load_mnist_data():
     with gzip.open('mnist.pkl.gz', 'rb') as f:
         train_set, valid_set, test_set = pickle.load(f)
+        input_activations = lambda input_digits: map(lambda input: input.reshape((len(input),1)), input_digits)
         target_activations = lambda target_digits: map(lambda digit: activation_pattern(digit), target_digits)
-        return zip(train_set[0], target_activations(train_set[1])),\
-               zip(valid_set[0], target_activations(valid_set[1])),\
-               zip(test_set[0], target_activations(test_set[1]))
+        return zip(input_activations(train_set[0]), target_activations(train_set[1])),\
+               zip(input_activations(valid_set[0]), target_activations(valid_set[1])),\
+               zip(input_activations(test_set[0]), target_activations(test_set[1]))
 
 if __name__ == "__main__":
     t0 = time()
