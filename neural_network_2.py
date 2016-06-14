@@ -24,6 +24,8 @@ CHANGES MADE:
 
 """
 
+# TODO: Error is probably caused by training data having the form of (length) vectors instead of (length, 1) matrices??
+
 class NeuralNetwork:
     def __init__(self, layer_sizes):
         self.L = len(layer_sizes)
@@ -58,22 +60,11 @@ class NeuralNetwork:
         return correct_outputs
 
     def update_mini_batch(self, mini_batch, learning_rate):
-        new_weights = [None] + [w for w in self.weights[1:]]
-        new_biases = [None] + [b for b in self.biases[1:]]
         factor = - learning_rate / len(mini_batch)
-
-        gb, gw = self.backpropagation(mini_batch)
-
-
-        # for input, target in mini_batch:
-        #     gradient_weights, gradient_biases = self.backpropagation(input, target)
-        #     for layer in range(1, self.L):
-        #         new_weights[layer] += factor * gradient_weights[layer]
-        #         new_biases[layer] += factor * gradient_biases[layer]
-
-        self.weights = new_weights
-        self.biases = new_biases
-
+        gradient_weights, gradient_biases = self.backpropagation(mini_batch)
+        for layer in range(1, self.L):
+            self.weights[layer] += factor * gradient_weights[layer]
+            self.biases[layer] += factor * gradient_biases[layer]
 
     def backpropagation(self, mini_batch):
         inputs, targets = zip(*mini_batch)
@@ -99,9 +90,9 @@ class NeuralNetwork:
             error[layer] = np.dot(self.weights[layer+1].T, error[layer+1]) * self.activation_function_prime(z[layer])
 
         # 5. Calculate gradients
-        # TODO: Figure out what happens for outer with new simultaneous system
-        # gradient_weights = [None] + [np.outer(error[layer], activity[layer-1]) for layer in range(1, self.L)]
-        # gradient_biases = [None] + [error[layer] for layer in range(1, self.L)]
+        # The gradients from all cases in the mini batch are summed up into one weight matrix and bias vector per layer
+        gradient_weights = [None] + [np.dot(error[layer], activity[layer-1].T) for layer in range(1, self.L)]
+        gradient_biases = [None] + [np.dot(error[layer], np.ones((len(mini_batch), 1))) for layer in range(1, self.L)]
         return gradient_weights, gradient_biases
 
     def feedforward(self, activity):
