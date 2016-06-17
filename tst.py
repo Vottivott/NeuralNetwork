@@ -1,12 +1,15 @@
 import numpy as np
 
-output = np.array([[1],[2],[3]])
-binary_output = 1 * (output == np.max(output))
-print binary_output
-target = np.array([[0],[0],[1]])
-print all(binary_output == target)
-
-
+# output = np.array([[1],[2],[3]])
+# binary_output = 1 * (output == np.max(output))
+# print binary_output
+# target = np.array([[0],[0],[1]])
+# print all(binary_output == target)
+#
+a = np.array([1,2,3])
+b = np.copy(a)
+b[0] = 5
+print a, b
 
 # e = np.array([[1,4],
 #      [2,5],

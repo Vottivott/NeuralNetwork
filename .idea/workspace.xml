@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoTestManager">
+    <enabled-run-configurations>
+      <run-configuration type="tests" name="Unittests in TestNeuralNetwork2" />
+    </enabled-run-configurations>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6e9edc51-8d05-44ee-90af-6a24f09c2078" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unit_tests/test_data.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/testsave.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/tst.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural_network.py" afterPath="$PROJECT_DIR$/neural_network.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural_network_2.py" afterPath="$PROJECT_DIR$/neural_network_2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/visualize_weights.py" afterPath="$PROJECT_DIR$/visualize_weights.py" />
     </list>
     <ignored path="Backpropagation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,12 +34,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="neural_network_2.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/neural_network_2.py">
+      <file leaf-file-name="test_neuralNetwork.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/unit_tests/test_neuralNetwork.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="168" column="102" selection-start-line="168" selection-start-column="102" selection-end-line="168" selection-end-column="102" />
-              <folding />
+            <state relative-caret-position="455">
+              <caret line="41" column="70" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,9 +68,13 @@
         <option value="$PROJECT_DIR$/testsave.py" />
         <option value="$PROJECT_DIR$/visualize_animated.py" />
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/neural_network.py" />
         <option value="$PROJECT_DIR$/visualize_weights.py" />
+        <option value="$PROJECT_DIR$/test2.py" />
+        <option value="$PROJECT_DIR$/test_neuralNetwork.py" />
         <option value="$PROJECT_DIR$/neural_network_2.py" />
+        <option value="$PROJECT_DIR$/neural_network.py" />
+        <option value="$PROJECT_DIR$/tst.py" />
+        <option value="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" />
       </list>
     </option>
   </component>
@@ -115,6 +128,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Backpropagation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuralNetwork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unit_tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -130,90 +157,120 @@
     <property name="FullScreen" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.neural_network_2">
-    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GitHub\NeuralNetwork\unit_tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Unittest TestNeuralNetwork2.test_update_mini_batch">
+    <configuration default="false" name="Unittests in TestNeuralNetwork2 (3)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unit_tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Backpropagation" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" />
+      <option name="CLASS_NAME" value="TestNeuralNetwork2" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="neural_network" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Unittests in TestNeuralNetwork2" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unit_tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Backpropagation" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neural_network.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" />
+      <option name="CLASS_NAME" value="TestNeuralNetwork2" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="visualize_weights" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Unittests in TestNeuralNetwork2 (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unit_tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Backpropagation" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualize_weights.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" />
+      <option name="CLASS_NAME" value="TestNeuralNetwork2" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="neural_network_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Unittest TestNeuralNetwork2.test_update_mini_batch" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unit_tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Backpropagation" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neural_network_2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" />
+      <option name="CLASS_NAME" value="TestNeuralNetwork2" />
+      <option name="METHOD_NAME" value="test_update_mini_batch" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="fragment" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Unittests in TestNeuralNetwork2 (4)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unit_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Backpropagation" />
-      <option name="SCRIPT_NAME" value="/fragment.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" />
+      <option name="CLASS_NAME" value="TestNeuralNetwork2" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -350,20 +407,43 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.test" />
-      <item index="1" class="java.lang.String" itemvalue="Python.neural_network" />
-      <item index="2" class="java.lang.String" itemvalue="Python.visualize_weights" />
-      <item index="3" class="java.lang.String" itemvalue="Python.neural_network_2" />
-      <item index="4" class="java.lang.String" itemvalue="Python.fragment" />
+    <configuration default="false" name="Unittests in NeuralNetwork" type="tests" factoryName="Unittests" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Backpropagation" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
+      <option name="TEST_TYPE" value="TEST_FOLDER" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in NeuralNetwork" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (3)" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestNeuralNetwork2.test_update_mini_batch" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (4)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.neural_network_2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.fragment" />
-        <item index="2" class="java.lang.String" itemvalue="Python.visualize_weights" />
-        <item index="3" class="java.lang.String" itemvalue="Python.neural_network" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestNeuralNetwork2.test_update_mini_batch" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (4)" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -416,8 +496,47 @@
       <option name="project" value="LOCAL" />
       <updated>1465942671122</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Continue debugging (not working)">
+      <created>1466121925904</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1466121925904</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittest_TestNeuralNetwork2_test_update_mini_batch - 2016.06.18 at 00h 06m 13s.xml">
+      <configuration name="Unittest TestNeuralNetwork2.test_update_mini_batch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_TestNeuralNetwork2_test_update_mini_batch - 2016.06.18 at 00h 06m 32s.xml">
+      <configuration name="Unittest TestNeuralNetwork2.test_update_mini_batch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_TestNeuralNetwork2_test_update_mini_batch - 2016.06.18 at 00h 08m 29s.xml">
+      <configuration name="Unittest TestNeuralNetwork2.test_update_mini_batch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_TestNeuralNetwork2_test_update_mini_batch - 2016.06.18 at 00h 08m 45s.xml">
+      <configuration name="Unittest TestNeuralNetwork2.test_update_mini_batch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestNeuralNetwork2 - 2016.06.18 at 00h 07m 29s.xml">
+      <configuration name="Unittests in TestNeuralNetwork2" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestNeuralNetwork2_(1) - 2016.06.18 at 00h 07m 41s.xml">
+      <configuration name="Unittests in TestNeuralNetwork2 (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestNeuralNetwork2_(2) - 2016.06.18 at 00h 07m 16s.xml">
+      <configuration name="Unittests in TestNeuralNetwork2 (2)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestNeuralNetwork2_(3) - 2016.06.18 at 00h 07m 22s.xml">
+      <configuration name="Unittests in TestNeuralNetwork2 (3)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestNeuralNetwork2_(4) - 2016.06.18 at 00h 07m 10s.xml">
+      <configuration name="Unittests in TestNeuralNetwork2 (4)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestNeuralNetwork2_(4) - 2016.06.18 at 00h 08m 38s.xml">
+      <configuration name="Unittests in TestNeuralNetwork2 (4)" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1853" height="1098" extended-state="6" />
@@ -428,11 +547,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35165974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3520249" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24915825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49170125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49117342" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -478,11 +597,6 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/neural_network.py</url>
-          <line>98</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/neural_network_2.py</url>
           <line>179</line>
           <option name="timeStamp" value="32" />
@@ -490,7 +604,7 @@
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/neural_network_2.py</url>
           <line>121</line>
-          <option name="timeStamp" value="33" />
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -500,7 +614,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="34" />
+      <option name="time" value="36" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -509,7 +623,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2268">
           <caret line="114" column="40" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
-          <folding />
+          <folding>
+            <marker date="1466197642182" expanded="false" signature="0:108" ph="import ..." />
+            <marker date="1466197642182" expanded="true" signature="111:517" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="519:731" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="733:1275" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="1277:1508" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="1651:7279" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="1688:2192" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="2314:2984" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="2346:2984" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="2643:2908" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3105:3346" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3173:3315" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3407:3708" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3574:3708" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3752:7070" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="4364:4770" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="5291:5649" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="5661:5805" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="6046:7019" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7108:7279" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7326:7387" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7424:7480" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7517:7595" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7626:7692" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7709:7747" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7770:7813" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7872:7901" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7933:7994" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8050:8113" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8154:8245" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8291:8370" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8419:8560" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8584:9170" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8631:9170" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8926:9170" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="9198:9549" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -517,7 +668,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3192">
           <caret line="158" column="43" selection-start-line="158" selection-start-column="43" selection-end-line="158" selection-end-column="43" />
-          <folding />
+          <folding>
+            <marker date="1466197642182" expanded="false" signature="0:108" ph="import ..." />
+            <marker date="1466197642182" expanded="true" signature="111:517" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="519:731" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="733:1275" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="1277:1508" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="1651:7279" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="1688:2192" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="2314:2984" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="2346:2984" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="2643:2908" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3105:3346" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3173:3315" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3407:3708" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3574:3708" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3752:7070" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="4364:4770" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="5291:5649" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="5661:5805" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="6046:7019" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7108:7279" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7326:7387" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7424:7480" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7517:7595" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7626:7692" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7709:7747" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7770:7813" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7872:7901" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7933:7994" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8050:8113" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8154:8245" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8291:8370" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8419:8560" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8584:9170" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8631:9170" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8926:9170" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="9198:9549" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -525,7 +713,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="158" column="43" selection-start-line="158" selection-start-column="43" selection-end-line="158" selection-end-column="43" />
-          <folding />
+          <folding>
+            <marker date="1466197642182" expanded="false" signature="0:108" ph="import ..." />
+            <marker date="1466197642182" expanded="true" signature="111:517" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="519:731" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="733:1275" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="1277:1508" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="1651:7279" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="1688:2192" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="2314:2984" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="2346:2984" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="2643:2908" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3105:3346" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3173:3315" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3407:3708" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3574:3708" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3752:7070" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="4364:4770" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="5291:5649" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="5661:5805" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="6046:7019" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7108:7279" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7326:7387" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7424:7480" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7517:7595" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7626:7692" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7709:7747" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7770:7813" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7872:7901" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7933:7994" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8050:8113" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8154:8245" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8291:8370" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8419:8560" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8584:9170" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8631:9170" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8926:9170" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="9198:9549" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -533,7 +758,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-          <folding />
+          <folding>
+            <marker date="1466197642182" expanded="false" signature="0:108" ph="import ..." />
+            <marker date="1466197642182" expanded="true" signature="111:517" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="519:731" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="733:1275" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="1277:1508" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="1651:7279" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="1688:2192" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="2314:2984" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="2346:2984" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="2643:2908" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3105:3346" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3173:3315" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3407:3708" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3574:3708" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3752:7070" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="4364:4770" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="5291:5649" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="5661:5805" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="6046:7019" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7108:7279" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7326:7387" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7424:7480" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7517:7595" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7626:7692" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7709:7747" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7770:7813" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7872:7901" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7933:7994" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8050:8113" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8154:8245" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8291:8370" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8419:8560" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8584:9170" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8631:9170" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8926:9170" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="9198:9549" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -585,13 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="364" column="15" selection-start-line="364" selection-start-column="15" selection-end-line="364" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testsave.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -743,56 +998,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neural_network.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
-          <folding>
-            <marker date="1466120106232" expanded="true" signature="0:394" ph="&quot;&quot;&quot;Vad kunna gora?...&quot;&quot;&quot;" />
-            <marker date="1466120106232" expanded="false" signature="395:503" ph="import ..." />
-            <marker date="1466120106232" expanded="true" signature="525:4269" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="562:1063" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="1185:1855" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="1217:1855" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="1514:1779" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="1976:2217" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="2044:2186" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="2278:2827" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="2491:2758" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="2618:2758" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="2875:4060" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="3247:3403" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="4098:4269" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="4316:4377" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="4414:4470" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="4507:4585" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="4616:4682" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="4699:4737" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="4760:4803" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="4862:4891" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="4923:4980" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="5036:5099" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="5140:5231" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="5277:5356" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="5405:5546" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="5570:5987" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="5617:5987" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="5800:5987" ph="..." />
-            <marker date="1466120106232" expanded="true" signature="6015:6365" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <marker date="1466119294224" expanded="true" signature="191:943" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/visualize_weights.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -808,11 +1013,127 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testsave.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tst.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding>
+            <marker date="1466200652112" expanded="true" signature="20:199" ph="..." />
+            <marker date="1466200652112" expanded="true" signature="258:1010" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neural_network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding>
+            <marker date="1466198346683" expanded="true" signature="0:394" ph="&quot;&quot;&quot;Vad kunna gora?...&quot;&quot;&quot;" />
+            <marker date="1466198346683" expanded="false" signature="395:503" ph="import ..." />
+            <marker date="1466198346683" expanded="true" signature="525:4449" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="562:1063" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="1185:2035" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="1217:2035" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="1436:1668" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="1453:1602" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="1694:1959" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="2156:2397" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="2224:2366" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="2458:3007" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="2671:2938" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="2798:2938" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="3055:4240" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="3427:3583" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="4278:4449" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="4496:4557" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="4594:4650" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="4687:4765" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="4796:4862" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="4879:4917" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="4940:4983" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="5042:5071" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="5103:5160" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="5216:5279" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="5320:5411" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="5457:5536" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="5585:5726" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="5750:6167" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="5797:6167" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="5980:6167" ph="..." />
+            <marker date="1466198346683" expanded="true" signature="6195:6546" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/neural_network_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="168" column="102" selection-start-line="168" selection-start-column="102" selection-end-line="168" selection-end-column="102" />
-          <folding />
+        <state relative-caret-position="2697">
+          <caret line="238" column="100" selection-start-line="238" selection-start-column="100" selection-end-line="238" selection-end-column="100" />
+          <folding>
+            <marker date="1466197642182" expanded="false" signature="0:108" ph="import ..." />
+            <marker date="1466197642182" expanded="true" signature="111:517" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="519:731" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="733:1275" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="1277:1508" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1466197642182" expanded="true" signature="1651:7279" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="1688:2192" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="2314:2984" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="2346:2984" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="2643:2908" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3105:3346" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3173:3315" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3407:3708" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3574:3708" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="3752:7070" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="4364:4770" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="5291:5649" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="5661:5805" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="6046:7019" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7108:7279" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7326:7387" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7424:7480" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7517:7595" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7626:7692" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7709:7747" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7770:7813" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7872:7901" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="7933:7994" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8050:8113" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8154:8245" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8291:8370" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8419:8560" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8584:9170" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8631:9170" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="8926:9170" ph="..." />
+            <marker date="1466197642182" expanded="true" signature="9198:9549" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit_tests/test_neuralNetwork.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="41" column="70" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -38,7 +38,9 @@ class NeuralNetwork:
         for i in range(epochs):
             random.shuffle(training_data)
             mini_batches = [training_data[k:k+mini_batch_size] for k in range(0, len(training_data), mini_batch_size)]
-            for mini_batch in mini_batches:
+            for j, mini_batch in enumerate(mini_batches):
+                # if j == len(mini_batches)/2:
+                #     save_to_file((self.weights, self.biases, self.layer_sizes, self.L, mini_batch), "test_data.pkl")
                 self.update_mini_batch(mini_batch, learning_rate)
             if test_data:
                 correct_outputs = self.test(test_data, test_evaluation_function)
@@ -159,7 +161,7 @@ if __name__ == "__main__":
     t0 = time()
     train_set, valid_set, test_set = load_mnist_data()
     network = NeuralNetwork((784, 100, 10))
-    network.SGD(train_set, 1, 1, 3, test_set, highest_activation)
+    network.SGD(train_set, 10, 1, 3, test_set, highest_activation)
     # save_to_file(network, "network.pkl")
     t = time() - t0
     print "Time elapsed: " + str(t) + " seconds"
