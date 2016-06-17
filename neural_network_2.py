@@ -24,6 +24,56 @@ CHANGES MADE:
 
 """
 
+"""
+What??
+Epoch 0: 5002 out of 10000 test cases correct (50.02%)
+
+Time elapsed: 20.4639999866 seconds
+
+Epoch 0: 2007 out of 10000 test cases correct (20.07%)
+
+Time elapsed: 19.0779998302 seconds
+
+1028
+
+980
+
+1028
+
+983
+
+1031
+
+1028
+
+Epoch 0: 2711 out of 10000 test cases correct (27.11%)
+
+1010
+
+mini batch size = 1 ger
+Epoch 0: 7968 out of 10000 test cases correct (79.68%)
+Time elapsed: 61.3570001125 seconds
+
+jmfr med neural_network (1)
+Epoch 0: 7506 out of 10000 test cases correct (75.06%)
+Time elapsed: 49.9800000191 seconds
+
+dvs samma
+"""
+
+"""
+batch_size = 2 ger
+Epoch 0: 8877 out of 10000 test cases correct (88.77%)
+
+Time elapsed: 42.9709999561 seconds
+
+batch_size = 5 ger
+Epoch 0: 9335 out of 10000 test cases correct (93.35%)
+
+Time elapsed: 25.5700001717 seconds
+
+"""
+
 # TODO: Error is probably caused by training data having the form of (length) vectors instead of (length, 1) matrices??
 
 class NeuralNetwork:
@@ -68,7 +118,9 @@ class NeuralNetwork:
 
     def backpropagation(self, mini_batch):
         inputs, targets = map(np.hstack, zip(*mini_batch))
-        assert all(inputs[:, 0:1] == zip(*mini_batch)[0][0])
+
+        assert_index = 0
+        assert all(inputs[:, assert_index:assert_index+1] == zip(*mini_batch)[0][assert_index])
 
         activity = [np.zeros((layer_size, len(mini_batch))) for layer_size in self.layer_sizes]
         error = [None] + [np.zeros((layer_size, len(mini_batch))) for layer_size in self.layer_sizes[1:]]
@@ -81,19 +133,18 @@ class NeuralNetwork:
         for layer in range(1, self.L):
             z[layer] = np.dot(self.weights[layer], activity[layer-1]) + self.biases[layer]
             activity[layer] = self.activation_function(z[layer])
-
-            Z = np.dot(self.weights[layer], activity[layer - 1][:,0]) + self.biases[layer][:,0]
+            Z = np.dot(self.weights[layer], activity[layer - 1][:,assert_index]) + self.biases[layer][:,0]
             a = self.activation_function(Z)
-            c_a = activity[layer][:,0]
+            c_a = activity[layer][:,assert_index]
             assert all(abs(c_a - a) < 0.0000001)
 
         # 3. Calculate error for last layer
         cost_gradient = self.cost_function_gradient(targets, activity[-1])
         error[-1] = cost_gradient * self.activation_function_prime(z[-1])
 
-        CG = self.cost_function_gradient(targets[:,0], activity[-1][:,0])
-        E = CG * self.activation_function_prime(z[-1][:,0])
-        c_E = error[-1][:,0]
+        CG = self.cost_function_gradient(targets[:,assert_index], activity[-1][:,assert_index])
+        E = CG * self.activation_function_prime(z[-1][:,assert_index])
+        c_E = error[-1][:,assert_index]
         assert all(abs(c_E - E) < 0.0000001)
 
 
@@ -101,8 +152,8 @@ class NeuralNetwork:
         for layer in range(self.L-2, 0, -1):
             error[layer] = np.dot(self.weights[layer+1].T, error[layer+1]) * self.activation_function_prime(z[layer])
 
-            E = np.dot(self.weights[layer + 1].T, error[layer + 1][:,0]) * self.activation_function_prime(z[layer][:,0])
-            c_E = error[layer][:,0]
+            E = np.dot(self.weights[layer + 1].T, error[layer + 1][:,assert_index]) * self.activation_function_prime(z[layer][:,assert_index])
+            c_E = error[layer][:,assert_index]
             assert all(abs(c_E - E) < 0.0000001)
 
 
@@ -112,7 +163,13 @@ class NeuralNetwork:
         gradient_weights = [None] + [np.dot(error[layer], activity[layer-1].T) for layer in range(1, self.L)]
         gradient_biases = [None] + [np.dot(error[layer], np.ones((len(mini_batch), 1))) for layer in range(1, self.L)]
 
+
+
         # TODO: Continue debugging... :/
+        # TODO: I really don't get what's wrong? A mini_batch of 5 gives 93% while 10 gives 10% ...???
+
+        # gradient_weights = [None] + [np.outer(error[layer], activity[layer-1]) for layer in range(1, self.L)]
+        # gradient_biases = [None] + [error[layer] for layer in range(1, self.L)]
 
         # GW = [None] + [np.outer(error[layer][:,0], activity[layer - 1][:,0]) for layer in range(1, self.L)]
         # GB = [None] + [error[layer][:,0] for layer in range(1, self.L)]
@@ -189,7 +246,7 @@ if __name__ == "__main__":
     t0 = time()
     train_set, valid_set, test_set = load_mnist_data()
     network = NeuralNetwork((784, 100, 10))
-    network.SGD(train_set, 10, 1, 3, test_set, highest_activation)
+    network.SGD(train_set, 5, 1, 3, test_set, highest_activation)
     # save_to_file(network, "network.pkl")
     t = time() - t0
     print "Time elapsed: " + str(t) + " seconds"

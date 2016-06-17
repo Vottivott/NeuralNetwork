@@ -34,7 +34,7 @@ if __name__ == "__main__":
     t0 = time()
     train_set, valid_set, test_set = load_mnist_data()
     net = NeuralNetwork((784, 100, 10))
-    net.SGD(train_set, 10, 1, 3, test_set, highest_activation)
+    net.SGD(train_set, 1, 1, 3, test_set, highest_activation)
     # save_to_file(network, "network.pkl")
     t = time() - t0
     print "Time elapsed: " + str(t) + " seconds"

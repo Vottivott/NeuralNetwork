@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6e9edc51-8d05-44ee-90af-6a24f09c2078" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural_network.py" afterPath="$PROJECT_DIR$/neural_network.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural_network_2.py" afterPath="$PROJECT_DIR$/neural_network_2.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/visualize_weights.py" afterPath="$PROJECT_DIR$/visualize_weights.py" />
@@ -29,8 +30,8 @@
       <file leaf-file-name="neural_network_2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neural_network_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="114" column="40" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
+            <state relative-caret-position="399">
+              <caret line="168" column="102" selection-start-line="168" selection-start-column="102" selection-end-line="168" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -57,9 +58,9 @@
         <option value="$PROJECT_DIR$/network.py" />
         <option value="$PROJECT_DIR$/testsave.py" />
         <option value="$PROJECT_DIR$/visualize_animated.py" />
+        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/neural_network.py" />
         <option value="$PROJECT_DIR$/visualize_weights.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/neural_network_2.py" />
       </list>
     </option>
@@ -181,23 +182,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="visualize_animated" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Backpropagation" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualize_animated.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="neural_network_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -211,6 +195,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Backpropagation" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neural_network_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="fragment" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Backpropagation" />
+      <option name="SCRIPT_NAME" value="/fragment.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -353,16 +354,16 @@
       <item index="0" class="java.lang.String" itemvalue="Python.test" />
       <item index="1" class="java.lang.String" itemvalue="Python.neural_network" />
       <item index="2" class="java.lang.String" itemvalue="Python.visualize_weights" />
-      <item index="3" class="java.lang.String" itemvalue="Python.visualize_animated" />
-      <item index="4" class="java.lang.String" itemvalue="Python.neural_network_2" />
+      <item index="3" class="java.lang.String" itemvalue="Python.neural_network_2" />
+      <item index="4" class="java.lang.String" itemvalue="Python.fragment" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.neural_network_2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.fragment" />
         <item index="2" class="java.lang.String" itemvalue="Python.visualize_weights" />
         <item index="3" class="java.lang.String" itemvalue="Python.neural_network" />
-        <item index="4" class="java.lang.String" itemvalue="Python.visualize_animated" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -408,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1465908616670</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Debug new backprop version, add assertions (not working yet)">
+      <created>1465942671122</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1465942671122</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -420,11 +428,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35684648" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35165974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24915825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49273857" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49170125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -452,7 +460,9 @@
     <MESSAGE value="Add neural_network_2 for implementing more efficient version" />
     <MESSAGE value="Begin implementing optimization changes" />
     <MESSAGE value="Add calculations for gradients summing all cases in a mini batch at once" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add calculations for gradients summing all cases in a mini batch at once" />
+    <MESSAGE value="Debug new backprop version, add assertions (not working yet)" />
+    <MESSAGE value="Continue debugging (not working)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Continue debugging (not working)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -474,8 +484,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/neural_network_2.py</url>
-          <line>122</line>
+          <line>179</line>
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/neural_network_2.py</url>
+          <line>121</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -485,11 +500,19 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="33" />
+      <option name="time" value="34" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/neural_network_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2268">
+          <caret line="114" column="40" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/neural_network_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3192">
@@ -569,13 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/read_hannes_digit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -693,13 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visualize_animated.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -707,75 +716,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visualize_weights.py">
+    <entry file="file://$PROJECT_DIR$/visualize_animated.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="21">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <marker date="1465938824966" expanded="true" signature="0:109" ph="import ..." />
-            <marker date="1465938824966" expanded="true" signature="183:620" ph="..." />
-            <marker date="1465938824966" expanded="true" signature="388:602" ph="..." />
-            <marker date="1465938824966" expanded="true" signature="670:783" ph="..." />
-            <marker date="1465938824966" expanded="true" signature="868:963" ph="..." />
-            <marker date="1465938824966" expanded="true" signature="991:1514" ph="..." />
+            <marker date="1465855516995" expanded="false" signature="0:299" ph="import ..." />
+            <marker date="1465855516995" expanded="true" signature="337:462" ph="..." />
+            <marker date="1465855516995" expanded="true" signature="511:563" ph="..." />
+            <marker date="1465855516995" expanded="true" signature="792:825" ph="..." />
+            <marker date="1465855516995" expanded="true" signature="910:960" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/read_hannes_digit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="486">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
           <folding>
-            <marker date="1465941202736" expanded="true" signature="20:289" ph="..." />
+            <marker date="1465656106625" expanded="false" signature="0:31" ph="import ..." />
+            <marker date="1465656106625" expanded="true" signature="62:236" ph="..." />
+            <marker date="1465656106625" expanded="true" signature="238:395" ph="..." />
+            <marker date="1465656106625" expanded="true" signature="607:657" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neural_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="97" selection-end-column="79" />
+        <state relative-caret-position="267">
+          <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
           <folding>
-            <marker date="1465858005382" expanded="true" signature="0:394" ph="&quot;&quot;&quot;Vad kunna gora?...&quot;&quot;&quot;" />
-            <marker date="1465858005382" expanded="false" signature="395:503" ph="import ..." />
-            <marker date="1465858005382" expanded="true" signature="525:4269" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="562:1063" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="1185:1855" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="1217:1855" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="1514:1779" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="1976:2217" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="2044:2186" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="2278:2827" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="2491:2758" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="2618:2758" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="2875:4060" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="3247:3403" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="4098:4269" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="4316:4377" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="4414:4470" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="4507:4585" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="4616:4682" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="4699:4737" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="4760:4803" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="4862:4891" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="4923:4980" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="5036:5099" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="5140:5231" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="5277:5356" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="5405:5546" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="5570:5987" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="5617:5987" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="5800:5987" ph="..." />
-            <marker date="1465858005382" expanded="true" signature="6015:6366" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="0:394" ph="&quot;&quot;&quot;Vad kunna gora?...&quot;&quot;&quot;" />
+            <marker date="1466120106232" expanded="false" signature="395:503" ph="import ..." />
+            <marker date="1466120106232" expanded="true" signature="525:4269" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="562:1063" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="1185:1855" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="1217:1855" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="1514:1779" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="1976:2217" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="2044:2186" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="2278:2827" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="2491:2758" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="2618:2758" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="2875:4060" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="3247:3403" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="4098:4269" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="4316:4377" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="4414:4470" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="4507:4585" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="4616:4682" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="4699:4737" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="4760:4803" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="4862:4891" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="4923:4980" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="5036:5099" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="5140:5231" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="5277:5356" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="5405:5546" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="5570:5987" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="5617:5987" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="5800:5987" ph="..." />
+            <marker date="1466120106232" expanded="true" signature="6015:6365" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <folding>
+            <marker date="1466119294224" expanded="true" signature="191:943" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visualize_weights.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
+          <folding>
+            <marker date="1466120713342" expanded="true" signature="0:109" ph="import ..." />
+            <marker date="1466120713342" expanded="true" signature="183:620" ph="..." />
+            <marker date="1466120713342" expanded="true" signature="388:602" ph="..." />
+            <marker date="1466120713342" expanded="true" signature="670:783" ph="..." />
+            <marker date="1466120713342" expanded="true" signature="868:963" ph="..." />
+            <marker date="1466120713342" expanded="true" signature="991:1513" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neural_network_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="114" column="40" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
+        <state relative-caret-position="399">
+          <caret line="168" column="102" selection-start-line="168" selection-start-column="102" selection-end-line="168" selection-end-column="102" />
           <folding />
         </state>
       </provider>
