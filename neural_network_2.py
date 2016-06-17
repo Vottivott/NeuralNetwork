@@ -6,7 +6,7 @@ import gzip
 from time import time
 import winsound
 
-
+import neural_network
 """
 This version will try to do calculations for all training cases in a mini batch at the same time to improve efficiency.
 Compare this result with the time for a non-optimized network:
@@ -86,6 +86,8 @@ class NeuralNetwork:
         self.activation_function_prime = np.vectorize(sigmoid_prime)
         self.cost_function_gradient = least_squares_cost_function_gradient
 
+        self.saved_activities = []
+
     def SGD(self, training_data, mini_batch_size, epochs, learning_rate, test_data=None, test_evaluation_function=None):
         for i in range(epochs):
             random.shuffle(training_data)
@@ -133,8 +135,11 @@ class NeuralNetwork:
         for layer in range(1, self.L):
             z[layer] = np.dot(self.weights[layer], activity[layer-1]) + self.biases[layer]
             activity[layer] = self.activation_function(z[layer])
+
             Z = np.dot(self.weights[layer], activity[layer - 1][:,assert_index]) + self.biases[layer][:,0]
-            a = self.activation_function(Z)
+            # a = self.activation_function(Z)
+            af = np.vectorize(neural_network.sigmoid)
+            a = af(Z)
             c_a = activity[layer][:,assert_index]
             assert all(abs(c_a - a) < 0.0000001)
 
@@ -143,7 +148,8 @@ class NeuralNetwork:
         error[-1] = cost_gradient * self.activation_function_prime(z[-1])
 
         CG = self.cost_function_gradient(targets[:,assert_index], activity[-1][:,assert_index])
-        E = CG * self.activation_function_prime(z[-1][:,assert_index])
+        afp = np.vectorize(neural_network.sigmoid_prime)
+        E = CG * afp(z[-1][:,assert_index])
         c_E = error[-1][:,assert_index]
         assert all(abs(c_E - E) < 0.0000001)
 
@@ -152,17 +158,33 @@ class NeuralNetwork:
         for layer in range(self.L-2, 0, -1):
             error[layer] = np.dot(self.weights[layer+1].T, error[layer+1]) * self.activation_function_prime(z[layer])
 
-            E = np.dot(self.weights[layer + 1].T, error[layer + 1][:,assert_index]) * self.activation_function_prime(z[layer][:,assert_index])
+            E = np.dot(self.weights[layer + 1].T, error[layer + 1][:,assert_index]) * afp(z[layer][:,assert_index])
             c_E = error[layer][:,assert_index]
             assert all(abs(c_E - E) < 0.0000001)
 
 
-
         # 5. Calculate gradients
         # The gradients from all cases in the mini batch are summed up into one weight matrix and bias vector per layer
+
         gradient_weights = [None] + [np.dot(error[layer], activity[layer-1].T) for layer in range(1, self.L)]
+
+
+        # v-- this is the same thing as the above
+        # gradient_weights = [None] + [np.zeros((self.layer_sizes[i], self.layer_sizes[i-1])) for i in range(1, len(self.layer_sizes))]
+        # for layer in range(1,self.L):
+        #     for i in range(len(mini_batch)):
+        #         e = error[layer][:,i]
+        #         a = activity[layer-1][:,i]
+        #         gradient_weights[layer] += np.outer(e, a)
+
+
+        # gradient_weights = [None] + [np.outer(error[layer], activity[layer - 1]) for layer in range(1, self.L)]
+
+
+
         gradient_biases = [None] + [np.dot(error[layer], np.ones((len(mini_batch), 1))) for layer in range(1, self.L)]
 
+        self.saved_activities = [gradient_biases[1][:,0] for i in range(len(mini_batch))]
 
 
         # TODO: Continue debugging... :/

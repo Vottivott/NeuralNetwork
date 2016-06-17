@@ -3,11 +3,18 @@ import neural_network
 import neural_network_2
 import numpy as np
 
+"""
+So what I got out from this is that the biases are calculated correctly, while the weights are completely wrong
 
+Hur kan b vara korrekt samtidigt som b_gradient ar oforandrad??
+"""
 
 class TestNeuralNetwork2(TestCase):
     def setUp(self):
         weights, biases, layer_sizes, L, mini_batch = neural_network.load_from_file("test_data.pkl")
+
+        # mini_batch = mini_batch[:1]
+
         self.neural_network = neural_network.NeuralNetwork(layer_sizes)
         self.neural_network.weights = list(weights)
         self.neural_network.biases = list(biases)
@@ -27,9 +34,9 @@ class TestNeuralNetwork2(TestCase):
         weights1 = self.neural_network.weights
         weights2 = self.neural_network_2.weights
 
-        diff_b = [biases2 - biases1 for biases2, biases1 in
+        diff_b = [b2 - b1 for b2, b1 in
                   zip(biases2[1:], biases1[1:])]
-        diff_w = [weights2 - weights1 for weights2, weights1 in
+        diff_w = [w2 - w1 for w2, w1 in
                   zip(weights2[1:], weights1[1:])]
         print "!"
         for bias1, bias2 in zip(biases1[1:], biases2[1:]):
@@ -46,4 +53,11 @@ class TestNeuralNetwork2(TestCase):
         self.neural_network.update_mini_batch(self.mini_batch, 300)
         self.neural_network_2.update_mini_batch(self.mini_batch_2, 300)
 
+
+        acs1 = self.neural_network.saved_activities
+        acs2 = self.neural_network_2.saved_activities
+        diff = [None] + [a2 - a1 for a2, a1 in zip(acs2, acs1)]
+        diff_sum = sum(acs2) - sum(acs1)
+        print acs1
+        print acs2
         self.check_networks_equal()

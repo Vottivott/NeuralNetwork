@@ -34,6 +34,8 @@ class NeuralNetwork:
         self.activation_function_prime = np.vectorize(sigmoid_prime)
         self.cost_function_gradient = least_squares_cost_function_gradient
 
+        self.saved_activities = []
+
     def SGD(self, training_data, mini_batch_size, epochs, learning_rate, test_data=None, test_evaluation_function=None):
         for i in range(epochs):
             random.shuffle(training_data)
@@ -95,9 +97,13 @@ class NeuralNetwork:
         for layer in range(self.L-2, 0, -1):
             error[layer] = np.dot(self.weights[layer+1].T, error[layer+1]) * self.activation_function_prime(z[layer])
 
+
         # 5. Calculate gradients
         gradient_weights = [None] + [np.outer(error[layer], activity[layer-1]) for layer in range(1, self.L)]
         gradient_biases = [None] + [error[layer] for layer in range(1, self.L)]
+
+        self.saved_activities.append(gradient_biases[1])#[-1])
+
         return gradient_weights, gradient_biases
 
     def feedforward(self, activity):

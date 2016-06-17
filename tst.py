@@ -6,10 +6,16 @@ import numpy as np
 # target = np.array([[0],[0],[1]])
 # print all(binary_output == target)
 #
+# a = np.array([1,2,3])
+# b = np.copy(a)
+# b[0] = 5
+# print a, b
+M = np.eye(3)
+b = np.array([[1],[2],[3]])
+print np.dot(M, b)
 a = np.array([1,2,3])
-b = np.copy(a)
-b[0] = 5
-print a, b
+print a.reshape((3,1))
+print a
 
 # e = np.array([[1,4],
 #      [2,5],
