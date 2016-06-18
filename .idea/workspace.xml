@@ -8,10 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6e9edc51-8d05-44ee-90af-6a24f09c2078" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural_network.py" afterPath="$PROJECT_DIR$/neural_network.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural_network_2.py" afterPath="$PROJECT_DIR$/neural_network_2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tst.py" afterPath="$PROJECT_DIR$/tst.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" afterPath="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" />
     </list>
     <ignored path="Backpropagation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,11 +32,11 @@
       <file leaf-file-name="neural_network_2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neural_network_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2093">
-              <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+            <state relative-caret-position="390">
+              <caret line="275" column="35" selection-start-line="275" selection-start-column="35" selection-end-line="275" selection-end-column="35" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1466249883078" expanded="false" signature="0:108" ph="import ..." />
+                <marker date="1466252848388" expanded="false" signature="0:108" ph="import ..." />
               </folding>
             </state>
           </provider>
@@ -70,10 +67,10 @@
         <option value="$PROJECT_DIR$/visualize_weights.py" />
         <option value="$PROJECT_DIR$/test2.py" />
         <option value="$PROJECT_DIR$/test_neuralNetwork.py" />
-        <option value="$PROJECT_DIR$/tst.py" />
-        <option value="$PROJECT_DIR$/neural_network_2.py" />
-        <option value="$PROJECT_DIR$/neural_network.py" />
         <option value="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" />
+        <option value="$PROJECT_DIR$/tst.py" />
+        <option value="$PROJECT_DIR$/neural_network.py" />
+        <option value="$PROJECT_DIR$/neural_network_2.py" />
       </list>
     </option>
   </component>
@@ -161,7 +158,24 @@
       <recent name="C:\GitHub\NeuralNetwork\unit_tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in TestNeuralNetwork2 (3)">
+  <component name="RunManager" selected="Python.neural_network_2">
+    <configuration default="false" name="neural_network" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Backpropagation" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neural_network.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
     <configuration default="false" name="Unittests in TestNeuralNetwork2" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -184,7 +198,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittest TestNeuralNetwork2.test_update_mini_batch" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests in TestNeuralNetwork2 (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -196,9 +210,9 @@
       <module name="Backpropagation" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" />
       <option name="CLASS_NAME" value="TestNeuralNetwork2" />
-      <option name="METHOD_NAME" value="test_update_mini_batch" />
+      <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -228,7 +242,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="neural_network" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="neural_network_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -240,31 +254,9 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Backpropagation" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neural_network.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neural_network_2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in TestNeuralNetwork2 (3)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unit_tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Backpropagation" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" />
-      <option name="CLASS_NAME" value="TestNeuralNetwork2" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -425,18 +417,18 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in NeuralNetwork" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestNeuralNetwork2.test_update_mini_batch" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (2)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.neural_network" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (3)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.neural_network" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (2)" />
+      <item index="5" class="java.lang.String" itemvalue="Python.neural_network_2" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (3)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.neural_network" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (2)" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestNeuralNetwork2.test_update_mini_batch" />
+        <item index="0" class="java.lang.String" itemvalue="Python.neural_network_2" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (2)" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.neural_network" />
         <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2" />
       </list>
     </recent_temporary>
@@ -525,24 +517,38 @@
       <option name="project" value="LOCAL" />
       <updated>1466208058250</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Continue debugging">
+      <created>1466250151167</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1466250151167</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Debug, now update_mini_batch seems to yield the same result for both versions">
+      <created>1466252645997</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1466252645997</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_TestNeuralNetwork2_(2) - 2016.06.18 at 12h 39m 16s.xml">
+    <history-entry file="Unittests_in_TestNeuralNetwork2 - 2016.06.18 at 14h 11m 11s.xml">
+      <configuration name="Unittests in TestNeuralNetwork2" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestNeuralNetwork2_(1) - 2016.06.18 at 14h 11m 59s.xml">
+      <configuration name="Unittests in TestNeuralNetwork2 (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestNeuralNetwork2_(1) - 2016.06.18 at 14h 15m 41s.xml">
+      <configuration name="Unittests in TestNeuralNetwork2 (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestNeuralNetwork2_(2) - 2016.06.18 at 14h 16m 29s.xml">
       <configuration name="Unittests in TestNeuralNetwork2 (2)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestNeuralNetwork2_(3) - 2016.06.18 at 13h 13m 34s.xml">
-      <configuration name="Unittests in TestNeuralNetwork2 (3)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_TestNeuralNetwork2_(3) - 2016.06.18 at 13h 15m 36s.xml">
-      <configuration name="Unittests in TestNeuralNetwork2 (3)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_TestNeuralNetwork2_(3) - 2016.06.18 at 13h 18m 53s.xml">
-      <configuration name="Unittests in TestNeuralNetwork2 (3)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_TestNeuralNetwork2_(3) - 2016.06.18 at 13h 19m 25s.xml">
-      <configuration name="Unittests in TestNeuralNetwork2 (3)" configurationId="tests" />
+    <history-entry file="Unittests_in_TestNeuralNetwork2_(2) - 2016.06.18 at 14h 22m 33s.xml">
+      <configuration name="Unittests in TestNeuralNetwork2 (2)" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_TestNeuralNetwork2_(3) - 2016.06.18 at 13h 26m 55s.xml">
       <configuration name="Unittests in TestNeuralNetwork2 (3)" configurationId="tests" />
@@ -569,11 +575,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3759086" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3759086" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24915825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48390445" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48390445" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -607,7 +613,9 @@
     <MESSAGE value="Calculate difference for biases and weights between old and new version" />
     <MESSAGE value="Continue with never-ending debugging... :/" />
     <MESSAGE value="Made one realisation that may help" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made one realisation that may help" />
+    <MESSAGE value="Continue debugging" />
+    <MESSAGE value="Debug, now update_mini_batch seems to yield the same result for both versions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debug, now update_mini_batch seems to yield the same result for both versions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -624,7 +632,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/neural_network_2.py</url>
-          <line>204</line>
+          <line>206</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
@@ -653,7 +661,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="47" />
+      <option name="time" value="50" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
@@ -669,7 +677,7 @@
           <caret line="114" column="40" selection-start-line="114" selection-start-column="40" selection-end-line="114" selection-end-column="40" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1466249883078" expanded="false" signature="0:108" ph="import ..." />
+            <marker date="1466252848388" expanded="false" signature="0:108" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -680,7 +688,7 @@
           <caret line="158" column="43" selection-start-line="158" selection-start-column="43" selection-end-line="158" selection-end-column="43" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1466249883078" expanded="false" signature="0:108" ph="import ..." />
+            <marker date="1466252848388" expanded="false" signature="0:108" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -691,7 +699,7 @@
           <caret line="158" column="43" selection-start-line="158" selection-start-column="43" selection-end-line="158" selection-end-column="43" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1466249883078" expanded="false" signature="0:108" ph="import ..." />
+            <marker date="1466252848388" expanded="false" signature="0:108" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -702,7 +710,7 @@
           <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1466249883078" expanded="false" signature="0:108" ph="import ..." />
+            <marker date="1466252848388" expanded="false" signature="0:108" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -937,17 +945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tst.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding>
-            <marker date="1466245557245" expanded="true" signature="20:407" ph="..." />
-            <marker date="1466245557245" expanded="true" signature="477:1229" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/numpy/core/numeric.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -1114,54 +1111,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tst.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding>
+            <marker date="1466251643941" expanded="true" signature="20:407" ph="..." />
+            <marker date="1466251643941" expanded="true" signature="477:1229" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/neural_network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="116" column="61" selection-start-line="116" selection-start-column="61" selection-end-line="116" selection-end-column="61" />
+        <state relative-caret-position="375">
+          <caret line="86" column="43" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
           <folding>
-            <marker date="1466249882987" expanded="true" signature="0:394" ph="&quot;&quot;&quot;Vad kunna gora?...&quot;&quot;&quot;" />
-            <marker date="1466249882987" expanded="false" signature="395:503" ph="import ..." />
-            <marker date="1466249882987" expanded="true" signature="525:5388" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="562:1099" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="1221:2071" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="1253:2071" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="1472:1704" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="1489:1638" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="1730:1995" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="2192:2433" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="2260:2402" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="2494:3864" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="2503:2636" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="2799:2914" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="3007:3686" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="3309:3686" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="3912:5179" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="4285:4441" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="5217:5388" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="5435:5496" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="5533:5589" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="5626:5704" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="5735:5801" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="5818:5856" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="5879:5922" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="5981:6010" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="6042:6099" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="6155:6218" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="6259:6350" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="6396:6475" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="6524:6665" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="6689:7106" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="6736:7106" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="6919:7106" ph="..." />
-            <marker date="1466249882987" expanded="true" signature="7134:7485" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="0:394" ph="&quot;&quot;&quot;Vad kunna gora?...&quot;&quot;&quot;" />
+            <marker date="1466252568777" expanded="false" signature="395:503" ph="import ..." />
+            <marker date="1466252568777" expanded="true" signature="525:5520" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="562:1099" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="1221:2071" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="1253:2071" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="1472:1704" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="1489:1638" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="1730:1995" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="2192:2433" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="2260:2402" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="2494:3996" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="2503:2636" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="2799:2914" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="3057:3736" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="3359:3736" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="4044:5311" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="4417:4573" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="5349:5520" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="5567:5628" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="5665:5721" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="5758:5836" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="5867:5933" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="5950:5988" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="6011:6054" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="6113:6142" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="6174:6231" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="6287:6350" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="6391:6482" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="6528:6607" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="6656:6797" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="6821:7238" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="6868:7238" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="7051:7238" ph="..." />
+            <marker date="1466252568777" expanded="true" signature="7266:7617" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/unit_tests/test_neuralNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="69" column="35" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+        <state relative-caret-position="375">
+          <caret line="47" column="58" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
           <folding>
             <marker date="1466249914119" expanded="true" signature="0:94" ph="import ..." />
             <marker date="1466249914119" expanded="true" signature="96:349" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
@@ -1181,11 +1189,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/neural_network_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2093">
-          <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+        <state relative-caret-position="390">
+          <caret line="275" column="35" selection-start-line="275" selection-start-column="35" selection-end-line="275" selection-end-column="35" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1466249883078" expanded="false" signature="0:108" ph="import ..." />
+            <marker date="1466252848388" expanded="false" signature="0:108" ph="import ..." />
           </folding>
         </state>
       </provider>
