@@ -74,8 +74,6 @@ Time elapsed: 25.5700001717 seconds
 
 """
 
-# TODO: Error is probably caused by training data having the form of (length) vectors instead of (length, 1) matrices??
-
 class NeuralNetwork:
     def __init__(self, layer_sizes):
         self.L = len(layer_sizes)
@@ -85,8 +83,6 @@ class NeuralNetwork:
         self.activation_function = np.vectorize(sigmoid)
         self.activation_function_prime = np.vectorize(sigmoid_prime)
         self.cost_function_gradient = least_squares_cost_function_gradient
-
-        self.saved_activities = []
 
     def SGD(self, training_data, mini_batch_size, epochs, learning_rate, test_data=None, test_evaluation_function=None):
         for i in range(epochs):
@@ -113,8 +109,6 @@ class NeuralNetwork:
 
     def update_mini_batch(self, mini_batch, learning_rate):
         factor = - float(learning_rate) / len(mini_batch)
-        # print "factor (2) = " + str(factor)
-
         gradient_weights, gradient_biases = self.backpropagation(mini_batch)
         for layer in range(1, self.L):
             self.weights[layer] += factor * gradient_weights[layer]
@@ -123,9 +117,6 @@ class NeuralNetwork:
     def backpropagation(self, mini_batch):
         inputs, targets = map(np.hstack, zip(*mini_batch))
 
-        assert_index = 0
-        assert all(inputs[:, assert_index:assert_index+1] == zip(*mini_batch)[0][assert_index])
-
         activity = [np.zeros((layer_size, len(mini_batch))) for layer_size in self.layer_sizes]
         error = [None] + [np.zeros((layer_size, len(mini_batch))) for layer_size in self.layer_sizes[1:]]
         z = [None] + [np.zeros((layer_size, len(mini_batch))) for layer_size in self.layer_sizes[1:]]
@@ -133,81 +124,23 @@ class NeuralNetwork:
         # 1. Input activation
         activity[0] = inputs
 
-
         # 2. Feed-forward
         for layer in range(1, self.L):
             z[layer] = np.dot(self.weights[layer], activity[layer-1]) + self.biases[layer]
             activity[layer] = self.activation_function(z[layer])
 
-            # Z = np.dot(self.weights[layer], activity[layer - 1][:,assert_index]) + self.biases[layer][:,0]
-            # # a = self.activation_function(Z)
-            # af = np.vectorize(neural_network.sigmoid)
-            # a = af(Z)
-            # c_a = activity[layer][:,assert_index]
-            # assert all(abs(c_a - a) < 0.0000001)
-
-
         # 3. Calculate error for last layer
         cost_gradient = self.cost_function_gradient(targets, activity[-1])
         error[-1] = cost_gradient * self.activation_function_prime(z[-1])
-
-        CG = self.cost_function_gradient(targets[:,assert_index], activity[-1][:,assert_index])
-        afp = np.vectorize(neural_network.sigmoid_prime)
-        E = CG * afp(z[-1][:,assert_index])
-        c_E = error[-1][:,assert_index]
-        assert all(abs(c_E - E) < 0.0000001)
-
 
         # 4. Feed-backward
         for layer in range(self.L-2, 0, -1):
             error[layer] = np.dot(self.weights[layer+1].T, error[layer+1]) * self.activation_function_prime(z[layer])
 
-            E = np.dot(self.weights[layer + 1].T, error[layer + 1][:,assert_index]) * afp(z[layer][:,assert_index])
-            c_E = error[layer][:,assert_index]
-            assert all(abs(c_E - E) < 0.0000001)
-
-
         # 5. Calculate gradients
         # The gradients from all cases in the mini batch are summed up into one weight matrix and bias vector per layer
-
         gradient_weights = [None] + [np.dot(error[layer], activity[layer-1].T) for layer in range(1, self.L)]
-
-
-        # v-- this is the same thing as the above
-        # gradient_weights = [None] + [np.zeros((self.layer_sizes[i], self.layer_sizes[i-1])) for i in range(1, len(self.layer_sizes))]
-        # for layer in range(1,self.L):
-        #     for i in range(len(mini_batch)):
-        #         e = error[layer][:,i]
-        #         a = activity[layer-1][:,i]
-        #         gradient_weights[layer] += np.outer(e, a)
-
-
-        # gradient_weights = [None] + [np.outer(error[layer], activity[layer - 1]) for layer in range(1, self.L)]
-
-
-
         gradient_biases = [None] + [np.dot(error[layer], np.ones((len(mini_batch), 1))) for layer in range(1, self.L)]
-
-        self.saved_activities = [np.copy(gradient_weights[1])]
-        # self.saved_activities = [np.copy(error[1][:, i]) for i in range(len(mini_batch))] #[:, i]
-
-
-        # TODO: Continue debugging... :/
-        # TODO: I really don't get what's wrong? A mini_batch of 5 gives 93% while 10 gives 10% ...???
-
-        # gradient_weights = [None] + [np.outer(error[layer], activity[layer-1]) for layer in range(1, self.L)]
-        # gradient_biases = [None] + [error[layer] for layer in range(1, self.L)]
-
-        # GW = [None] + [np.outer(error[layer][:,0], activity[layer - 1][:,0]) for layer in range(1, self.L)]
-        # GB = [None] + [error[layer][:,0] for layer in range(1, self.L)]
-        # c_GW = gradient_weights#[None] + [gradient_weights[layer] for layer in range(1, self.L)]
-        # c_GB = gradient_biases#[None] + [gradient_biases[layer] for layer in range(1,self.L)]
-        # diff_GW = c_GW[layer] - GW[layer]
-        # diff_GB = c_GB[layer] - GB[layer]
-        # for layer in range(1, self.L):
-        #     assert all(abs(c_GW[layer] - GW[layer]) < 0.0000001)
-        #     assert all(abs(c_GB[layer] - GB[layer]) < 0.0000001)
-
 
         return gradient_weights, gradient_biases
 
@@ -215,8 +148,6 @@ class NeuralNetwork:
         for layer in range(1, self.L):
             activity = self.activation_function(np.dot(self.weights[layer], activity) + self.biases[layer])
         return activity
-
-
 
 
 
