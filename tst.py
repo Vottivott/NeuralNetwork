@@ -10,12 +10,16 @@ import numpy as np
 # b = np.copy(a)
 # b[0] = 5
 # print a, b
+# M = np.eye(3)
+# N = M
+# M += np.array([[1,0,0],[0,0,0],[0,0,0]])
+# print M
+# print N
+# """DETTA FORKLARAR NOG EN HEL DEL!!! (MUTABILITET)"""
+
+a = np.array([[1],[10],[100]])
 M = np.eye(3)
-N = M
-M += np.array([[1,0,0],[0,0,0],[0,0,0]])
-print M
-print N
-"""DETTA FORKLARAR NOG EN HEL DEL!!! (MUTABILITET)"""
+print np.dot(M,M) + a
 
 # e = np.array([[1,4],
 #      [2,5],

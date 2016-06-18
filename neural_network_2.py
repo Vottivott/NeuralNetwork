@@ -131,17 +131,19 @@ class NeuralNetwork:
         # 1. Input activation
         activity[0] = inputs
 
+
         # 2. Feed-forward
         for layer in range(1, self.L):
             z[layer] = np.dot(self.weights[layer], activity[layer-1]) + self.biases[layer]
             activity[layer] = self.activation_function(z[layer])
 
-            Z = np.dot(self.weights[layer], activity[layer - 1][:,assert_index]) + self.biases[layer][:,0]
-            # a = self.activation_function(Z)
-            af = np.vectorize(neural_network.sigmoid)
-            a = af(Z)
-            c_a = activity[layer][:,assert_index]
-            assert all(abs(c_a - a) < 0.0000001)
+            # Z = np.dot(self.weights[layer], activity[layer - 1][:,assert_index]) + self.biases[layer][:,0]
+            # # a = self.activation_function(Z)
+            # af = np.vectorize(neural_network.sigmoid)
+            # a = af(Z)
+            # c_a = activity[layer][:,assert_index]
+            # assert all(abs(c_a - a) < 0.0000001)
+
 
         # 3. Calculate error for last layer
         cost_gradient = self.cost_function_gradient(targets, activity[-1])
@@ -184,7 +186,8 @@ class NeuralNetwork:
 
         gradient_biases = [None] + [np.dot(error[layer], np.ones((len(mini_batch), 1))) for layer in range(1, self.L)]
 
-        self.saved_activities = [gradient_biases[1][:,0] for i in range(len(mini_batch))]
+        self.saved_activities = [np.copy(gradient_weights[1])]
+        # self.saved_activities = [np.copy(error[1][:, i]) for i in range(len(mini_batch))] #[:, i]
 
 
         # TODO: Continue debugging... :/

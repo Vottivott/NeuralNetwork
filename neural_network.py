@@ -62,18 +62,27 @@ class NeuralNetwork:
         return correct_outputs
 
     def update_mini_batch(self, mini_batch, learning_rate):
-        new_weights = [None] + [w for w in self.weights[1:]]
-        new_biases = [None] + [b for b in self.biases[1:]]
+        # new_weights = [None] + [np.copy(w) for w in self.weights[1:]]
+        # new_biases = [None] + [np.copy(b) for b in self.biases[1:]]
+        delta_weights = [None] + [np.zeros_like(w) for w in self.weights[1:]]
+        delta_biases = [None] + [np.zeros_like(b) for b in self.biases[1:]]
+        # new_weights = [None] + [w for w in self.weights[1:]]
+        # new_biases = [None] + [b for b in self.biases[1:]]
         factor = - learning_rate / len(mini_batch)
 
         for input, target in mini_batch:
             gradient_weights, gradient_biases = self.backpropagation(input, target)
-            for layer in range(1, self.L):
-                new_weights[layer] += factor * gradient_weights[layer]
-                new_biases[layer] += factor * gradient_biases[layer]
+            delta_weights = [None] + [dw + ddw for dw, ddw in zip(delta_weights, gradient_weights)[1:]]
+            delta_biases = [None] + [db + ddb for db, ddb in zip(delta_biases, gradient_biases)[1:]]
+            # for layer in range(1, self.L):
+            #
+                # delta_weights[layer] += factor * gradient_weights[layer]
+                # delta_biases[layer] += factor * gradient_biases[layer]
+                # new_weights[layer] = new_weights[layer] + factor * gradient_weights[layer]
+                # new_biases[layer] = new_biases[layer] + factor * gradient_biases[layer]
 
-        self.weights = new_weights
-        self.biases = new_biases
+        self.weights = [None] + [w + nw for w,nw in zip(self.weights, delta_weights)[1:]]
+        self.biases = [None] + [b + nb for b,nb in zip(self.biases, delta_biases)[1:]]
 
 
     def backpropagation(self, input, target):
@@ -84,14 +93,17 @@ class NeuralNetwork:
         # 1. Input activation
         activity[0] = input
 
+
         # 2. Feed-forward
         for layer in range(1, self.L):
             z[layer] = np.dot(self.weights[layer], activity[layer-1]) + self.biases[layer]
             activity[layer] = self.activation_function(z[layer])
 
+
         # 3. Calculate error for last layer
         cost_gradient = self.cost_function_gradient(target, activity[-1])
         error[-1] = cost_gradient * self.activation_function_prime(z[-1])
+
 
         # 4. Feed-backward
         for layer in range(self.L-2, 0, -1):
@@ -102,7 +114,7 @@ class NeuralNetwork:
         gradient_weights = [None] + [np.outer(error[layer], activity[layer-1]) for layer in range(1, self.L)]
         gradient_biases = [None] + [error[layer] for layer in range(1, self.L)]
 
-        self.saved_activities.append(gradient_biases[1])#[-1])
+        self.saved_activities.append(np.copy(gradient_weights[1]))  # [-1])
 
         return gradient_weights, gradient_biases
 

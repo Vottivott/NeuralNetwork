@@ -28,6 +28,11 @@ class TestNeuralNetwork2(TestCase):
                              target.reshape((len(target), 1)))
                              for input, target in mini_batch]
 
+        acs2 = self.neural_network_2.weights[1:]
+        acs1 = self.neural_network.weights[1:]
+        diff = [a2 - a1 for a2, a1 in zip(acs2, acs1)]
+        print "!"
+
     def check_networks_equal(self):
         biases1 = [None] + [bias.reshape((len(bias),1)) for bias in self.neural_network.biases[1:]]
         biases2 = self.neural_network_2.biases
@@ -57,8 +62,9 @@ class TestNeuralNetwork2(TestCase):
 
         acs1 = self.neural_network.saved_activities
         acs2 = self.neural_network_2.saved_activities
-        diff = [None] + [a2 - a1 for a2, a1 in zip(acs2, acs1)]
-        diff_sum = sum(acs2) - sum(acs1)
+        # diff = [a2 - a1 for a2, a1 in zip(acs2, acs1)]
+        diff_sum = acs2[0] - sum(acs1)#acs2[0].reshape(len(acs2[0])) - sum(acs1)
+        diff = [a2 - a1 for a2, a1 in zip(acs2, acs1)]
         print acs1
         print acs2
         self.check_networks_equal()
