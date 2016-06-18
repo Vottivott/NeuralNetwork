@@ -11,13 +11,14 @@ def load_image( infilename ) :
 #     img = Image.fromarray( np.asarray( np.clip(npdata,0,255), dtype="uint8"), "L" )
 #     img.save( outfilename )
 
-data = load_image("HannesNumbers\Hannes\digit6.png")
+data = load_image("HannesNumbers\Hannes\digit10.png")
 
-import network
+from neural_network_2 import *
 
-neural_net = network.Network()
-neural_net.load()
-classified_digit = neural_net.classify(data)
+neural_net = load_from_file("saved_networks\9793.pkl")
+output = neural_net.feedforward(data.reshape(784,1))
+print output
+classified_digit = digit_from_activation_pattern(output)
 
 def get_indefinite_article(classified_digit):
     return "an" if classified_digit == 8 else "a"
