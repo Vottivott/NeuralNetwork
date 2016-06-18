@@ -92,7 +92,7 @@ class NeuralNetwork:
                 self.update_mini_batch(mini_batch, learning_rate)
             if test_data:
                 correct_outputs = self.test(test_data, test_evaluation_function)
-                # save_to_file(self, "saved_networks/" + str(correct_outputs) + ".pkl")
+                save_to_file(self, "saved_networks/" + str(correct_outputs) + ".pkl")
                 print "Epoch " + str(i) + ": " + test_result_string(correct_outputs, test_data)
             else:
                 print "Epoch " + str(i)
@@ -204,8 +204,15 @@ if __name__ == "__main__":
     t0 = time()
     train_set, valid_set, test_set = load_mnist_data()
     network = NeuralNetwork((784, 100, 10))
-    network.SGD(train_set, 10, 1, 3, test_set, highest_activation)
-    # save_to_file(network, "network.pkl")
+    network.SGD(train_set, 10, 30, 3, test_set, highest_activation)
+    save_to_file(network, "network.pkl")
     t = time() - t0
     print "Time elapsed: " + str(t) + " seconds"
     winsound.PlaySound("SystemHand", winsound.SND_ALIAS)
+
+"""
+network = NeuralNetwork((784, 100, 10))
+network.SGD(train_set, 10, 1, 3, test_set, highest_activation)
+Epoch 0: 9545 out of 10000 test cases correct (95.45%)
+Time elapsed: 17.0780000687 seconds
+"""

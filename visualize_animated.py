@@ -1,6 +1,6 @@
 import numpy as np
 
-from neural_network import *
+from neural_network_2 import *
 import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 import time
