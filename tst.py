@@ -11,11 +11,11 @@ import numpy as np
 # b[0] = 5
 # print a, b
 M = np.eye(3)
-b = np.array([[1],[2],[3]])
-print np.dot(M, b)
-a = np.array([1,2,3])
-print a.reshape((3,1))
-print a
+N = M
+M += np.array([[1,0,0],[0,0,0],[0,0,0]])
+print M
+print N
+"""DETTA FORKLARAR NOG EN HEL DEL!!! (MUTABILITET)"""
 
 # e = np.array([[1,4],
 #      [2,5],

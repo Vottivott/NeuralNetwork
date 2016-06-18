@@ -5,6 +5,7 @@ import numpy as np
 
 """
 So what I got out from this is that the biases are calculated correctly, while the weights are completely wrong
+^FALSKT - det diffen for biaserna ar lika rorig som for weightsen!!!
 
 Hur kan b vara korrekt samtidigt som b_gradient ar oforandrad??
 """
@@ -16,8 +17,8 @@ class TestNeuralNetwork2(TestCase):
         # mini_batch = mini_batch[:1]
 
         self.neural_network = neural_network.NeuralNetwork(layer_sizes)
-        self.neural_network.weights = list(weights)
-        self.neural_network.biases = list(biases)
+        self.neural_network.weights = [None] + [np.copy(weight) for weight in weights[1:]]
+        self.neural_network.biases = [None] + [np.copy(bias) for bias in biases[1:]]
         self.mini_batch = list(mini_batch)
 
         self.neural_network_2 = neural_network_2.NeuralNetwork(layer_sizes)

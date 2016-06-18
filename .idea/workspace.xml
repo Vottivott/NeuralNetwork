@@ -8,8 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6e9edc51-8d05-44ee-90af-6a24f09c2078" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural_network.py" afterPath="$PROJECT_DIR$/neural_network.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural_network_2.py" afterPath="$PROJECT_DIR$/neural_network_2.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tst.py" afterPath="$PROJECT_DIR$/tst.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" afterPath="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" />
     </list>
@@ -35,8 +33,8 @@
       <file leaf-file-name="test_neuralNetwork.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/unit_tests/test_neuralNetwork.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="63" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
+            <state relative-caret-position="147">
+              <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -69,9 +67,9 @@
         <option value="$PROJECT_DIR$/visualize_weights.py" />
         <option value="$PROJECT_DIR$/test2.py" />
         <option value="$PROJECT_DIR$/test_neuralNetwork.py" />
-        <option value="$PROJECT_DIR$/tst.py" />
         <option value="$PROJECT_DIR$/neural_network.py" />
         <option value="$PROJECT_DIR$/neural_network_2.py" />
+        <option value="$PROJECT_DIR$/tst.py" />
         <option value="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" />
       </list>
     </option>
@@ -160,29 +158,7 @@
       <recent name="C:\GitHub\NeuralNetwork\unit_tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittest TestNeuralNetwork2.test_update_mini_batch">
-    <configuration default="false" name="Unittests in TestNeuralNetwork2 (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unit_tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Backpropagation" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" />
-      <option name="CLASS_NAME" value="TestNeuralNetwork2" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittests in TestNeuralNetwork2 (2)">
     <configuration default="false" name="tst" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -240,6 +216,28 @@
       <method />
     </configuration>
     <configuration default="false" name="Unittests in TestNeuralNetwork2" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/unit_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Backpropagation" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/unit_tests/test_neuralNetwork.py" />
+      <option name="CLASS_NAME" value="TestNeuralNetwork2" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in TestNeuralNetwork2 (2)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -419,19 +417,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in NeuralNetwork" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.tst" />
-      <item index="3" class="java.lang.String" itemvalue="Python.neural_network_2" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestNeuralNetwork2.test_update_mini_batch" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2" />
+      <item index="1" class="java.lang.String" itemvalue="Python.tst" />
+      <item index="2" class="java.lang.String" itemvalue="Python.neural_network_2" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestNeuralNetwork2.test_update_mini_batch" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (2)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestNeuralNetwork2.test_update_mini_batch" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2" />
-        <item index="2" class="java.lang.String" itemvalue="Python.neural_network_2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.tst" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2 (2)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.tst" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestNeuralNetwork2.test_update_mini_batch" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestNeuralNetwork2" />
+        <item index="4" class="java.lang.String" itemvalue="Python.neural_network_2" />
       </list>
     </recent_temporary>
   </component>
@@ -505,13 +503,17 @@
       <option name="project" value="LOCAL" />
       <updated>1466202275307</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Continue with never-ending debugging... :/">
+      <created>1466207295465</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1466207295465</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_TestNeuralNetwork2_test_update_mini_batch - 2016.06.18 at 01h 26m 41s.xml">
-      <configuration name="Unittest TestNeuralNetwork2.test_update_mini_batch" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittest_TestNeuralNetwork2_test_update_mini_batch - 2016.06.18 at 01h 27m 20s.xml">
       <configuration name="Unittest TestNeuralNetwork2.test_update_mini_batch" configurationId="tests" />
     </history-entry>
@@ -536,8 +538,11 @@
     <history-entry file="Unittest_TestNeuralNetwork2_test_update_mini_batch - 2016.06.18 at 01h 45m 43s.xml">
       <configuration name="Unittest TestNeuralNetwork2.test_update_mini_batch" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_TestNeuralNetwork2 - 2016.06.18 at 01h 24m 03s.xml">
-      <configuration name="Unittests in TestNeuralNetwork2" configurationId="tests" />
+    <history-entry file="Unittests_in_TestNeuralNetwork2_(2) - 2016.06.18 at 01h 59m 28s.xml">
+      <configuration name="Unittests in TestNeuralNetwork2 (2)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestNeuralNetwork2_(2) - 2016.06.18 at 01h 59m 51s.xml">
+      <configuration name="Unittests in TestNeuralNetwork2 (2)" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -585,7 +590,8 @@
     <MESSAGE value="Continue debugging (not working)" />
     <MESSAGE value="Add unit test for comparing old and new version" />
     <MESSAGE value="Calculate difference for biases and weights between old and new version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Calculate difference for biases and weights between old and new version" />
+    <MESSAGE value="Continue with never-ending debugging... :/" />
+    <option name="LAST_COMMIT_MESSAGE" value="Continue with never-ending debugging... :/" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -607,12 +613,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/unit_tests/test_neuralNetwork.py</url>
-          <line>60</line>
+          <line>61</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/unit_tests/test_neuralNetwork.py</url>
-          <line>40</line>
+          <line>41</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
@@ -1049,17 +1055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tst.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <marker date="1466205428709" expanded="true" signature="20:264" ph="..." />
-            <marker date="1466205428709" expanded="true" signature="380:1132" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/neural_network.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
@@ -1102,10 +1097,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tst.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding>
+            <marker date="1466207834340" expanded="true" signature="20:264" ph="..." />
+            <marker date="1466207834340" expanded="true" signature="397:1149" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/neural_network_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="186" column="55" selection-start-line="186" selection-start-column="55" selection-end-line="186" selection-end-column="55" />
+        <state relative-caret-position="57">
+          <caret line="123" column="24" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="24" />
           <folding>
             <marker date="1466207143415" expanded="false" signature="0:108" ph="import ..." />
             <marker date="1466207143415" expanded="true" signature="0:131" ph="import ..." />
@@ -1151,8 +1157,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/unit_tests/test_neuralNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="63" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
+        <state relative-caret-position="147">
+          <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
