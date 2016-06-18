@@ -68,8 +68,8 @@ class NeuralNetwork:
         delta_biases = [None] + [np.zeros_like(b) for b in self.biases[1:]]
         # new_weights = [None] + [w for w in self.weights[1:]]
         # new_biases = [None] + [b for b in self.biases[1:]]
-        factor = - learning_rate / len(mini_batch)
-
+        factor = - float(learning_rate) / len(mini_batch)
+        print "factor (1) = " + str(factor)
         for input, target in mini_batch:
             gradient_weights, gradient_biases = self.backpropagation(input, target)
             delta_weights = [None] + [dw + ddw for dw, ddw in zip(delta_weights, gradient_weights)[1:]]
@@ -81,8 +81,10 @@ class NeuralNetwork:
                 # new_weights[layer] = new_weights[layer] + factor * gradient_weights[layer]
                 # new_biases[layer] = new_biases[layer] + factor * gradient_biases[layer]
 
-        self.weights = [None] + [w + nw for w,nw in zip(self.weights, delta_weights)[1:]]
-        self.biases = [None] + [b + nb for b,nb in zip(self.biases, delta_biases)[1:]]
+        # diff_sum = delta_weights[1] - sum(self.saved_activities)
+
+        self.weights = [None] + [w + factor*nw for w,nw in zip(self.weights, delta_weights)[1:]]
+        self.biases = [None] + [b + factor*nb for b,nb in zip(self.biases, delta_biases)[1:]]
 
 
     def backpropagation(self, input, target):

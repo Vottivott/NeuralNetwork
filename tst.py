@@ -18,9 +18,9 @@ import numpy as np
 # """DETTA FORKLARAR NOG EN HEL DEL!!! (MUTABILITET)"""
 
 a = np.array([[1],[10],[100]])
-M = np.eye(3)
-print np.dot(M,M) + a
-
+b = a.reshape((1,3))
+print a
+print b
 # e = np.array([[1,4],
 #      [2,5],
 #      [3,6]])

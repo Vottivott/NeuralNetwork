@@ -112,7 +112,9 @@ class NeuralNetwork:
         return correct_outputs
 
     def update_mini_batch(self, mini_batch, learning_rate):
-        factor = - learning_rate / len(mini_batch)
+        factor = - float(learning_rate) / len(mini_batch)
+        print "factor (2) = " + str(factor)
+
         gradient_weights, gradient_biases = self.backpropagation(mini_batch)
         for layer in range(1, self.L):
             self.weights[layer] += factor * gradient_weights[layer]
