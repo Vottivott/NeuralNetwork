@@ -6,9 +6,31 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e9edc51-8d05-44ee-90af-6a24f09c2078" name="Default" comment="Try read_hannes_digit on 9793.pkl">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/neural_network_3.py" />
+    <list default="true" id="6e9edc51-8d05-44ee-90af-6a24f09c2078" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9517.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9616.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9685.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9692.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9722.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9747.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9753.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9760.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9770.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9771.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9772.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9773.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9779.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9783.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9784.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9785.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9786.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9787.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9789.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9790.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9791.pkl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9793.pkl" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural_network_3.py" afterPath="$PROJECT_DIR$/neural_network_3.py" />
     </list>
     <ignored path="Backpropagation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +54,8 @@
       <file leaf-file-name="neural_network_3.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neural_network_3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-294">
-              <caret line="169" column="21" selection-start-line="169" selection-start-column="21" selection-end-line="169" selection-end-column="21" />
+            <state relative-caret-position="264">
+              <caret line="217" column="40" selection-start-line="217" selection-start-column="40" selection-end-line="217" selection-end-column="40" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -544,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1466268820615</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add neural_network_3">
+      <created>1466516229927</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1466516229927</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -632,7 +661,8 @@
     <MESSAGE value="Clean up code" />
     <MESSAGE value="Got 9793" />
     <MESSAGE value="Try read_hannes_digit on 9793.pkl" />
-    <option name="LAST_COMMIT_MESSAGE" value="Try read_hannes_digit on 9793.pkl" />
+    <MESSAGE value="Add neural_network_3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add neural_network_3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3286,8 +3316,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/neural_network_3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-294">
-          <caret line="169" column="21" selection-start-line="169" selection-start-column="21" selection-end-line="169" selection-end-column="21" />
+        <state relative-caret-position="264">
+          <caret line="217" column="40" selection-start-line="217" selection-start-column="40" selection-end-line="217" selection-end-column="40" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

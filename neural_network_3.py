@@ -73,10 +73,21 @@ Time elapsed: 25.5700001717 seconds
 
 """
 
+class CrossEntropyCost:
+    @staticmethod
+    def error_last_layer(z, a, y, activation_function_prime):
+        return a - y
+
+class QuadraticCost:
+    @staticmethod
+    def error_last_layer(z, a, y, activation_function_prime):
+        return (a - y) * activation_function_prime(z)
+
 class NeuralNetwork:
-    def __init__(self, layer_sizes):
+    def __init__(self, layer_sizes, cost=CrossEntropyCost):
         self.L = len(layer_sizes)
         self.layer_sizes = layer_sizes
+        self.cost = cost
         self.weights = [None] + [random_matrix(layer_sizes[i], layer_sizes[i-1], 0.2) for i in range(1, len(layer_sizes))]
         self.biases = [None] + [random_matrix(layer_sizes[i], 1, 0.2) for i in range(1, len(layer_sizes))]
         self.activation_function = np.vectorize(sigmoid)
@@ -129,8 +140,9 @@ class NeuralNetwork:
             activity[layer] = self.activation_function(z[layer])
 
         # 3. Calculate error for last layer
-        cost_gradient = self.cost_function_gradient(targets, activity[-1])
-        error[-1] = cost_gradient * self.activation_function_prime(z[-1])
+        error[-1] = self.cost.error_last_layer(z[-1], activity[-1], targets, self.activation_function_prime)
+        # cost_gradient = self.cost_function_gradient(targets, activity[-1])
+        # error[-1] = cost_gradient * self.activation_function_prime(z[-1])
 
         # 4. Feed-backward
         for layer in range(self.L-2, 0, -1):
@@ -147,7 +159,6 @@ class NeuralNetwork:
         for layer in range(1, self.L):
             activity = self.activation_function(np.dot(self.weights[layer], activity) + self.biases[layer])
         return activity
-
 
 
 def random_matrix(rows, cols, max_value):
@@ -202,8 +213,8 @@ def load_mnist_data():
 if __name__ == "__main__":
     t0 = time()
     train_set, valid_set, test_set = load_mnist_data()
-    network = NeuralNetwork((784, 100, 10))
-    network.SGD(train_set, 10, 30, 3, test_set, highest_activation)
+    network = NeuralNetwork((784, 100, 10), cost=CrossEntropyCost)
+    network.SGD(train_set, 10, 100, 0.5, test_set, highest_activation)
     save_to_file(network, "network.pkl")
     t = time() - t0
     print "Time elapsed: " + str(t) + " seconds"
@@ -214,4 +225,9 @@ network = NeuralNetwork((784, 100, 10))
 network.SGD(train_set, 10, 1, 3, test_set, highest_activation)
 Epoch 0: 9545 out of 10000 test cases correct (95.45%)
 Time elapsed: 17.0780000687 seconds
+
+network = NeuralNetwork((784, 100, 10), cost=CrossEntropyCost)
+network.SGD(train_set, 10, 30, 0.5, test_set, highest_activation)
+Epoch 0: 9616 out of 10000 test cases correct (96.16%)
+
 """
