@@ -6,31 +6,35 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e9edc51-8d05-44ee-90af-6a24f09c2078" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9517.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9616.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9685.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9692.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9722.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9747.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9753.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9760.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9770.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9771.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9772.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9773.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9779.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9783.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9784.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9785.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9786.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9787.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9789.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9790.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9791.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/saved_networks/9793.pkl" afterPath="" />
+    <list default="true" id="6e9edc51-8d05-44ee-90af-6a24f09c2078" name="Default" comment="Got 9795">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9611.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9674.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9712.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9731.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9754.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9756.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9761.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9767.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9768.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9777.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9778.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9780.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9782.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9783.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9784.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9785.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9786.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9787.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9788.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9789.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9790.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9791.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9792.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9793.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9794.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks/9795.pkl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural_network_3.py" afterPath="$PROJECT_DIR$/neural_network_3.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/network.pkl" afterPath="$PROJECT_DIR$/network.pkl" />
     </list>
     <ignored path="Backpropagation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,7 +58,7 @@
       <file leaf-file-name="neural_network_3.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neural_network_3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="159">
               <caret line="217" column="40" selection-start-line="217" selection-start-column="40" selection-end-line="217" selection-end-column="40" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -573,7 +577,14 @@
       <option name="project" value="LOCAL" />
       <updated>1466516229927</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Implement cross-entropy cost function">
+      <created>1466518655162</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1466518655162</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -610,9 +621,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1853" height="1098" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14277808" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14277808" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -662,7 +673,8 @@
     <MESSAGE value="Got 9793" />
     <MESSAGE value="Try read_hannes_digit on 9793.pkl" />
     <MESSAGE value="Add neural_network_3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add neural_network_3" />
+    <MESSAGE value="Implement cross-entropy cost function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement cross-entropy cost function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3316,7 +3328,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/neural_network_3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="159">
           <caret line="217" column="40" selection-start-line="217" selection-start-column="40" selection-end-line="217" selection-end-column="40" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
