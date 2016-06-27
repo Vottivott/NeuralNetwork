@@ -41,7 +41,7 @@ def get_sorted_files_by_modified_date(directory):
 def get_weight_animation_sequence():
     # nets = sorted(os.listdir("./saved_networks"))
     nets = get_sorted_files_by_modified_date("./saved_networks/")
-    # print nets
+    print nets
     for net in nets:
         yield load_from_file(net)
 
@@ -67,13 +67,13 @@ fig = plt.figure()
 def f(x, y):
     return np.sin(x) + np.cos(y)
 
-im = plt.imshow(np.eye(28), cmap=cm.Greys_r, animated=True)
-
+# im = plt.imshow(np.eye(28), cmap=cm.Greys_r, animated=True)
+im = plt.imshow(0.2+0.6*np.eye(28), cmap=plt.get_cmap('afmhot'), animated=True)
 
 def updatefig(*args):
     im.set_array(frames_it.next())
     return im,
 
-ani = animation.FuncAnimation(fig, updatefig, interval=50, blit=True)
+ani = animation.FuncAnimation(fig, updatefig, interval=0, blit=True)
 plt.show()
 

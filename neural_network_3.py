@@ -83,13 +83,17 @@ class QuadraticCost:
     def error_last_layer(z, a, y, activation_function_prime):
         return (a - y) * activation_function_prime(z)
 
+
+
 class NeuralNetwork:
     def __init__(self, layer_sizes, cost=CrossEntropyCost):
         self.L = len(layer_sizes)
         self.layer_sizes = layer_sizes
         self.cost = cost
-        self.weights = [None] + [random_matrix(layer_sizes[i], layer_sizes[i-1], 0.2) for i in range(1, len(layer_sizes))]
-        self.biases = [None] + [random_matrix(layer_sizes[i], 1, 0.2) for i in range(1, len(layer_sizes))]
+        self.weights = [None] + [gaussian_random_matrix(layer_sizes[i], layer_sizes[i-1], 1.0 / math.sqrt(layer_sizes[i-1])) for i in range(1, len(layer_sizes))]
+        self.biases = [None] + [gaussian_random_matrix(layer_sizes[i], 1, 1.0) for i in range(1, len(layer_sizes))]
+        # self.weights = [None] + [random_matrix(layer_sizes[i], layer_sizes[i - 1], 0.2) for i in range(1, len(layer_sizes))]
+        # self.biases = [None] + [random_matrix(layer_sizes[i], 1, 0.2) for i in range(1, len(layer_sizes))]
         self.activation_function = np.vectorize(sigmoid)
         self.activation_function_prime = np.vectorize(sigmoid_prime)
         self.cost_function_gradient = least_squares_cost_function_gradient
@@ -99,6 +103,7 @@ class NeuralNetwork:
             random.shuffle(training_data)
             mini_batches = [training_data[k:k+mini_batch_size] for k in range(0, len(training_data), mini_batch_size)]
             for mini_batch in mini_batches:
+                # save_to_file(self, "saved_networks/epoch_" + str(i) + "_mini_batch_" + str(e) +".pkl")
                 self.update_mini_batch(mini_batch, learning_rate, regularization_parameter, len(training_data))
             if test_data:
                 correct_outputs = self.test(test_data, test_evaluation_function)
@@ -161,6 +166,9 @@ class NeuralNetwork:
         return activity
 
 
+def gaussian_random_matrix(rows, cols, standard_deviation):
+    return np.random.randn(rows, cols) * standard_deviation
+
 def random_matrix(rows, cols, max_value):
     return (np.random.rand(rows,cols) - 0.5) * 2 * max_value
 
@@ -213,10 +221,10 @@ def load_mnist_data():
 if __name__ == "__main__":
     t0 = time()
     train_set, valid_set, test_set = load_mnist_data()
-    # network = NeuralNetwork((784, 100, 10), cost=CrossEntropyCost)
-    network = load_from_file("network.pkl")
+    network = NeuralNetwork((784, 100, 10), cost=CrossEntropyCost)
+    # network = load_from_file("network.pkl")
     # network.SGD(train_set, 10, 100, 0.5, 5.0, test_set, highest_activation)
-    network.SGD(train_set, 10, 30, 0.1, 5.0, test_set, highest_activation)
+    network.SGD(train_set, 10, 30, 0.5, 5.0, test_set, highest_activation)
     save_to_file(network, "network.pkl")
     t = time() - t0
     print "Time elapsed: " + str(t) + " seconds"

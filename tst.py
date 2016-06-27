@@ -1,58 +1,52 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
-from itertools import product, count
+# Have colormaps separated into categories:
+# http://matplotlib.org/examples/color/colormaps_reference.html
 
-for i in count():
-    print i
+cmaps = [('Perceptually Uniform Sequential',
+                            ['viridis', 'inferno', 'plasma', 'magma']),
+         ('Sequential',     ['Blues', 'BuGn', 'BuPu',
+                             'GnBu', 'Greens', 'Greys', 'Oranges', 'OrRd',
+                             'PuBu', 'PuBuGn', 'PuRd', 'Purples', 'RdPu',
+                             'Reds', 'YlGn', 'YlGnBu', 'YlOrBr', 'YlOrRd']),
+         ('Sequential (2)', ['afmhot', 'autumn', 'bone', 'cool',
+                             'copper', 'gist_heat', 'gray', 'hot',
+                             'pink', 'spring', 'summer', 'winter']),
+         ('Diverging',      ['BrBG', 'bwr', 'coolwarm', 'PiYG', 'PRGn', 'PuOr',
+                             'RdBu', 'RdGy', 'RdYlBu', 'RdYlGn', 'Spectral',
+                             'seismic']),
+         ('Qualitative',    ['Accent', 'Dark2', 'Paired', 'Pastel1',
+                             'Pastel2', 'Set1', 'Set2', 'Set3']),
+         ('Miscellaneous',  ['gist_earth', 'terrain', 'ocean', 'gist_stern',
+                             'brg', 'CMRmap', 'cubehelix',
+                             'gnuplot', 'gnuplot2', 'gist_ncar',
+                             'nipy_spectral', 'jet', 'rainbow',
+                             'gist_rainbow', 'hsv', 'flag', 'prism'])]
 
 
-
-hor_str, ver_str = {-1: "W", 0: "", 1: "E"}, {-1: "N", 0: "", 1: "S"}
-dir_str = {(x,y): ver_str[y] + hor_str[x] for x, y in product(hor_str, ver_str)}
-print dir_str
-
+nrows = max(len(cmap_list) for cmap_category, cmap_list in cmaps)
+gradient = np.linspace(0, 1, 256)
+gradient = np.vstack((gradient, gradient))
 
 
-# output = np.array([[1],[2],[3]])
-# binary_output = 1 * (output == np.max(output))
-# print binary_output
-# target = np.array([[0],[0],[1]])
-# print all(binary_output == target)
-#
-# a = np.array([1,2,3])
-# b = np.copy(a)
-# b[0] = 5
-# print a, b
-# M = np.eye(3)
-# N = M
-# M += np.array([[1,0,0],[0,0,0],[0,0,0]])
-# print M
-# print N
-# """DETTA FORKLARAR NOG EN HEL DEL!!! (MUTABILITET)"""
+def plot_color_gradients(cmap_category, cmap_list):
+    fig, axes = plt.subplots(nrows=nrows)
+    fig.subplots_adjust(top=0.95, bottom=0.01, left=0.2, right=0.99)
+    axes[0].set_title(cmap_category + ' colormaps', fontsize=14)
 
-# a = np.array([[1],[10],[100]])
-# b = a.reshape((1,3))
-# print a
-# print b
-# e = np.array([[1,4],
-#      [2,5],
-#      [3,6]])
-# a = np.array([[10,100],
-#      [100,10],
-#      [1,2]])
-#
-# gradient_weights = [None] + [np.dot(e, a.T) for layer in range(1, 2)]
-# gradient_biases = [None] + [np.dot(e, np.ones((2, 1))) for layer in range(1, 2)]
-#
-# print gradient_weights
-# print gradient_biases
-#
-# gradient_weights1 = [None] + [np.outer(e[:,0], a[:,0]) for layer in range(1, 2)]
-# gradient_biases1 = [None] + [e[:,0] for layer in range(1, 2)]
-#
-# gradient_weights2 = [None] + [np.outer(e[:,1], a[:,1]) for layer in range(1, 2)]
-# gradient_biases2 = [None] + [e[:,1] for layer in range(1, 2)]
-#
-# for i in range(1,2):
-#      print gradient_biases1[i] + gradient_biases2[i]
-#      print gradient_weights1[i] + gradient_weights2[i]
+    for ax, name in zip(axes, cmap_list):
+        ax.imshow(gradient, aspect='auto', cmap=plt.get_cmap(name))
+        pos = list(ax.get_position().bounds)
+        x_text = pos[0] - 0.01
+        y_text = pos[1] + pos[3]/2.
+        fig.text(x_text, y_text, name, va='center', ha='right', fontsize=10)
+
+    # Turn off *all* ticks & spines, not just the ones with colormaps.
+    for ax in axes:
+        ax.set_axis_off()
+
+for cmap_category, cmap_list in cmaps:
+    plot_color_gradients(cmap_category, cmap_list)
+
+plt.show()
