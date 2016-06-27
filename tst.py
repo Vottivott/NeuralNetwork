@@ -1,5 +1,18 @@
 import numpy as np
 
+from itertools import product, count
+
+for i in count():
+    print i
+
+
+
+hor_str, ver_str = {-1: "W", 0: "", 1: "E"}, {-1: "N", 0: "", 1: "S"}
+dir_str = {(x,y): ver_str[y] + hor_str[x] for x, y in product(hor_str, ver_str)}
+print dir_str
+
+
+
 # output = np.array([[1],[2],[3]])
 # binary_output = 1 * (output == np.max(output))
 # print binary_output
@@ -17,10 +30,10 @@ import numpy as np
 # print N
 # """DETTA FORKLARAR NOG EN HEL DEL!!! (MUTABILITET)"""
 
-a = np.array([[1],[10],[100]])
-b = a.reshape((1,3))
-print a
-print b
+# a = np.array([[1],[10],[100]])
+# b = a.reshape((1,3))
+# print a
+# print b
 # e = np.array([[1,4],
 #      [2,5],
 #      [3,6]])

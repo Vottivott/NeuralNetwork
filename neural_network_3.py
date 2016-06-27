@@ -94,15 +94,15 @@ class NeuralNetwork:
         self.activation_function_prime = np.vectorize(sigmoid_prime)
         self.cost_function_gradient = least_squares_cost_function_gradient
 
-    def SGD(self, training_data, mini_batch_size, epochs, learning_rate, test_data=None, test_evaluation_function=None):
+    def SGD(self, training_data, mini_batch_size, epochs, learning_rate, regularization_parameter=0.0, test_data=None, test_evaluation_function=None):
         for i in range(epochs):
             random.shuffle(training_data)
             mini_batches = [training_data[k:k+mini_batch_size] for k in range(0, len(training_data), mini_batch_size)]
             for mini_batch in mini_batches:
-                self.update_mini_batch(mini_batch, learning_rate)
+                self.update_mini_batch(mini_batch, learning_rate, regularization_parameter, len(training_data))
             if test_data:
                 correct_outputs = self.test(test_data, test_evaluation_function)
-                # save_to_file(self, "saved_networks/" + str(correct_outputs) + ".pkl")
+                save_to_file(self, "saved_networks/" + str(correct_outputs) + ".pkl")
                 print "Epoch " + str(i) + ": " + test_result_string(correct_outputs, test_data)
             else:
                 print "Epoch " + str(i)
@@ -117,11 +117,11 @@ class NeuralNetwork:
                 correct_outputs += 1
         return correct_outputs
 
-    def update_mini_batch(self, mini_batch, learning_rate):
+    def update_mini_batch(self, mini_batch, learning_rate, regularization_parameter, train_set_size):
         factor = - float(learning_rate) / len(mini_batch)
         gradient_weights, gradient_biases = self.backpropagation(mini_batch)
         for layer in range(1, self.L):
-            self.weights[layer] += factor * gradient_weights[layer]
+            self.weights[layer] = (1.0 - learning_rate * regularization_parameter / train_set_size) * self.weights[layer] + factor * gradient_weights[layer]
             self.biases[layer] += factor * gradient_biases[layer]
 
     def backpropagation(self, mini_batch):
@@ -214,7 +214,8 @@ if __name__ == "__main__":
     t0 = time()
     train_set, valid_set, test_set = load_mnist_data()
     network = NeuralNetwork((784, 100, 10), cost=CrossEntropyCost)
-    network.SGD(train_set, 10, 100, 0.5, test_set, highest_activation)
+    # network.SGD(train_set, 10, 100, 0.5, 5.0, test_set, highest_activation)
+    network.SGD(train_set, 10, 60, 0.1, 5.0, test_set, highest_activation)
     save_to_file(network, "network.pkl")
     t = time() - t0
     print "Time elapsed: " + str(t) + " seconds"
@@ -230,4 +231,7 @@ network = NeuralNetwork((784, 100, 10), cost=CrossEntropyCost)
 network.SGD(train_set, 10, 30, 0.5, test_set, highest_activation)
 Epoch 0: 9616 out of 10000 test cases correct (96.16%)
 
+network = NeuralNetwork((784, 100, 10), cost=CrossEntropyCost)
+network.SGD(train_set, 10, 100, 0.5, test_set, highest_activation)
+max 9795
 """
