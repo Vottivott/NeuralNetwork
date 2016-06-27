@@ -213,9 +213,10 @@ def load_mnist_data():
 if __name__ == "__main__":
     t0 = time()
     train_set, valid_set, test_set = load_mnist_data()
-    network = NeuralNetwork((784, 100, 10), cost=CrossEntropyCost)
+    # network = NeuralNetwork((784, 100, 10), cost=CrossEntropyCost)
+    network = load_from_file("network.pkl")
     # network.SGD(train_set, 10, 100, 0.5, 5.0, test_set, highest_activation)
-    network.SGD(train_set, 10, 60, 0.1, 5.0, test_set, highest_activation)
+    network.SGD(train_set, 10, 30, 0.1, 5.0, test_set, highest_activation)
     save_to_file(network, "network.pkl")
     t = time() - t0
     print "Time elapsed: " + str(t) + " seconds"
@@ -234,4 +235,8 @@ Epoch 0: 9616 out of 10000 test cases correct (96.16%)
 network = NeuralNetwork((784, 100, 10), cost=CrossEntropyCost)
 network.SGD(train_set, 10, 100, 0.5, test_set, highest_activation)
 max 9795
+
+network = NeuralNetwork((784, 100, 10), cost=CrossEntropyCost)
+network.SGD(train_set, 10, 90, 0.1, 5.0, test_set, highest_activation)
+max 9803
 """

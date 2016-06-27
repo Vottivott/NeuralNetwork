@@ -11,11 +11,11 @@ def load_image( infilename ) :
 #     img = Image.fromarray( np.asarray( np.clip(npdata,0,255), dtype="uint8"), "L" )
 #     img.save( outfilename )
 
-data = load_image("HannesNumbers\Hannes\digit9.png")
+data = load_image("HannesNumbers\Hannes\digit8.png")
 
 from neural_network_3 import *
 
-neural_net = load_from_file("saved_networks\9787.pkl")
+neural_net = load_from_file("saved_networks\9798.pkl")
 output = neural_net.feedforward(data.reshape(784,1))
 print output
 classified_digit = digit_from_activation_pattern(output)
