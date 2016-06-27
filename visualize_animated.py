@@ -1,6 +1,6 @@
 import numpy as np
 
-from neural_network_3 import *
+from neural_network_3_dropout import *
 import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 import time
@@ -45,8 +45,8 @@ def get_weight_animation_sequence():
     for net in nets:
         yield load_from_file(net)
 
-rows = 10
-cols = 10
+rows = 20
+cols = 20
 shape = (28,28)
 layer = 1
 

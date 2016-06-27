@@ -124,10 +124,26 @@ class NeuralNetwork:
 
     def update_mini_batch(self, mini_batch, learning_rate, regularization_parameter, train_set_size):
         factor = - float(learning_rate) / len(mini_batch)
+
+        # DROPOUT - clear rows from the weight matrix and bias vector for the hidden layer
+        real_hidden_weight_matrix = np.copy(self.weights[1])
+        real_hidden_bias_vector = np.copy(self.biases[1])
+        choice = np.random.choice([0, 1], size=(len(self.biases[1]),))
+        clear_rows = np.diag(choice)
+        self.weights[1] = np.dot(clear_rows, self.weights[1])
+        self.biases[1] = np.dot(clear_rows, self.biases[1])
+
         gradient_weights, gradient_biases = self.backpropagation(mini_batch)
+
+
         for layer in range(1, self.L):
             self.weights[layer] = (1.0 - learning_rate * regularization_parameter / train_set_size) * self.weights[layer] + factor * gradient_weights[layer]
             self.biases[layer] += factor * gradient_biases[layer]
+
+        # DROPOUT - restore cleared rows
+        restore_rows = np.diag(1 - choice)
+        self.weights[1] += np.dot(restore_rows, real_hidden_weight_matrix)
+        self.biases[1] += np.dot(restore_rows, real_hidden_bias_vector)
 
     def backpropagation(self, mini_batch):
         inputs, targets = map(np.hstack, zip(*mini_batch))
@@ -161,8 +177,10 @@ class NeuralNetwork:
         return gradient_weights, gradient_biases
 
     def feedforward(self, activity):
-        for layer in range(1, self.L):
+        for layer in range(1, self.L-1):
             activity = self.activation_function(np.dot(self.weights[layer], activity) + self.biases[layer])
+        # DROPOUT - Halve the output layer's weights to compensate for doubled amount of activity due to the whole network being used
+        activity = self.activation_function(np.dot(self.weights[-1] * 0.5, activity) + self.biases[-1])
         return activity
 
 
@@ -184,7 +202,7 @@ def load_from_file(filename):
         return pickle.load(file)
 
 def sigmoid(z):
-    return 1.0 / (1.0 + math.e**(-z))
+    return 1.0 / (1.0 + math.e**(-z)) if z != 0 else 0 # DROPOUT
 
 def sigmoid_prime(z):
     return sigmoid(z) * (1.0 - sigmoid(z))
@@ -221,10 +239,10 @@ def load_mnist_data():
 if __name__ == "__main__":
     t0 = time()
     train_set, valid_set, test_set = load_mnist_data()
-    network = NeuralNetwork((784, 100, 10), cost=CrossEntropyCost)
+    network = NeuralNetwork((784, 400, 10), cost=CrossEntropyCost)
     # network = load_from_file("network.pkl")
     # network.SGD(train_set, 10, 100, 0.5, 5.0, test_set, highest_activation)
-    network.SGD(train_set, 10, 30, 0.1, 5.0, test_set, highest_activation)
+    network.SGD(train_set, 10, 30, 0.5, 5.0, test_set, highest_activation)
     save_to_file(network, "network.pkl")
     t = time() - t0
     print "Time elapsed: " + str(t) + " seconds"

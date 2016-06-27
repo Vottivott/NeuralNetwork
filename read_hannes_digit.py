@@ -11,11 +11,11 @@ def load_image( infilename ) :
 #     img = Image.fromarray( np.asarray( np.clip(npdata,0,255), dtype="uint8"), "L" )
 #     img.save( outfilename )
 
-data = load_image("HannesNumbers\Hannes\digit9.png")
+data = load_image("HannesNumbers\Hannes\digit3.png")
 
-from neural_network_3 import *
+from neural_network_3_dropout import *
 
-neural_net = load_from_file("network.pkl")
+neural_net = load_from_file("saved_networks\9238.pkl")
 # neural_net = load_from_file("saved_networks\9803.pkl")
 output = neural_net.feedforward(data.reshape(784,1))
 print output
