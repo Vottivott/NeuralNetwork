@@ -7,70 +7,27 @@ from time import time
 import winsound
 
 """
-This version will try to do calculations for all training cases in a mini batch at the same time to improve efficiency.
+This version (2) will try to do calculations for all training cases in a mini batch at the same time to improve efficiency.
 Compare this result with the time for a non-optimized network:
     network = NeuralNetwork((784, 100, 10))
     network.SGD(train_set, 10, 1, 3, test_set, highest_activation)
     ->
     Epoch 0: 9500 out of 10000 test cases correct (95.0%)
     Time elapsed: 54.5859999657 seconds
-"""
-
-"""
 CHANGES MADE:
     Make self.biases a list of (layer_size, 1) matrices instead of (layer_size) vectors
     Make activity, error and z (layer_size, len(mini_batch)) matrices instead of (layer_size) vectors
-
 """
 
 """
-What??
-Epoch 0: 5002 out of 10000 test cases correct (50.02%)
+This version (3) implements the cross entropy cost function in order
+to prevent the learning slow-down for weights that are far from their target value,
+by eliminating the sigmoid-prime factor in the gradient equation.
 
-Time elapsed: 20.4639999866 seconds
+We also implement L2-regularization to improve generalization on the test set
+by lessening overfitting to the training set.
 
-Epoch 0: 2007 out of 10000 test cases correct (20.07%)
-
-Time elapsed: 19.0779998302 seconds
-
-1028
-
-980
-
-1028
-
-983
-
-1031
-
-1028
-
-Epoch 0: 2711 out of 10000 test cases correct (27.11%)
-
-1010
-
-mini batch size = 1 ger
-Epoch 0: 7968 out of 10000 test cases correct (79.68%)
-Time elapsed: 61.3570001125 seconds
-
-jmfr med neural_network (1)
-Epoch 0: 7506 out of 10000 test cases correct (75.06%)
-Time elapsed: 49.9800000191 seconds
-
-dvs samma
-"""
-
-"""
-batch_size = 2 ger
-Epoch 0: 8877 out of 10000 test cases correct (88.77%)
-
-Time elapsed: 42.9709999561 seconds
-
-batch_size = 5 ger
-Epoch 0: 9335 out of 10000 test cases correct (93.35%)
-
-Time elapsed: 25.5700001717 seconds
-
+Also, we try to set better initial weights so that the learning can hopefully take off sooner.
 """
 
 class CrossEntropyCost:
@@ -221,11 +178,13 @@ def load_mnist_data():
 if __name__ == "__main__":
     t0 = time()
     train_set, valid_set, test_set = load_mnist_data()
-    network = NeuralNetwork((784, 100, 10), cost=CrossEntropyCost)
-    # network = load_from_file("network.pkl")
+    #network = NeuralNetwork((784, 30, 30, 30, 10), cost=CrossEntropyCost)
+    network = load_from_file("saved_networks_up_to_9802/9802.pkl")
     # network.SGD(train_set, 10, 100, 0.5, 5.0, test_set, highest_activation)
-    network.SGD(train_set, 10, 30, 0.1, 5.0, test_set, highest_activation)
-    save_to_file(network, "network.pkl")
+    #network.SGD(train_set, 10, 30, 0.1, 5.0, test_set, highest_activation)
+    correct_outputs = network.test(test_set, highest_activation)
+    print test_result_string(correct_outputs, test_set)
+    #save_to_file(network, "network.pkl")
     t = time() - t0
     print "Time elapsed: " + str(t) + " seconds"
     winsound.PlaySound("SystemHand", winsound.SND_ALIAS)
