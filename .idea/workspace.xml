@@ -7,85 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e9edc51-8d05-44ee-90af-6a24f09c2078" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/experimental/extending_data.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/experimental/neural_network_3_dropout.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/network.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/neural_network.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/neural_network_2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/reverse.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9261.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9441.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9550.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9556.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9601.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9630.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9658.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9660.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9687.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9702.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9714.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9716.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9722.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9732.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9734.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9736.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9744.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9746.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9749.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9751.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9752.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9755.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9756.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9760.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9761.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9762.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9763.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9766.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9768.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9769.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9770.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9771.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9772.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9773.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9774.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9776.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9777.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9778.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9779.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9781.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9782.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9783.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9784.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9785.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9786.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9787.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9788.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9789.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9790.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9791.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9792.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9794.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9797.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9798.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9800.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9801.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9802.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9803.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/saved_networks_up_to_9802/9805.pkl" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/extending_data.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/network.pkl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/network.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/neural_network.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/neural_network_2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/neural_network_3_dropout.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/readimage.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reverse.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tst.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Backpropagation.iml" afterPath="$PROJECT_DIR$/.idea/Backpropagation.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural_network_3.py" afterPath="$PROJECT_DIR$/neural_network_3.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/visualize_animated.py" afterPath="$PROJECT_DIR$/visualize_animated.py" />
     </list>
     <ignored path="Backpropagation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -657,7 +579,14 @@
       <option name="project" value="LOCAL" />
       <updated>1467057930988</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Move old files">
+      <created>1472995151539</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1472995151539</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -693,15 +622,15 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1853" height="1098" extended-state="6" />
+    <frame x="-9" y="-9" width="1853" height="1098" extended-state="7" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14230344" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14230344" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.371875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.371875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24915825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -753,7 +682,8 @@
     <MESSAGE value="Implement better initial weights" />
     <MESSAGE value="Add display of random digits from the data set" />
     <MESSAGE value="Try out dropout on single hidden layer with poor (92%) results" />
-    <option name="LAST_COMMIT_MESSAGE" value="Try out dropout on single hidden layer with poor (92%) results" />
+    <MESSAGE value="Move old files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move old files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
